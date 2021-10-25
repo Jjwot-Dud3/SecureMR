@@ -1,5 +1,6 @@
 <template>
-  <v-app>
+  <v-app style="background: #FFFF;"> <!--Change the backgroun color-->
+    <NavbarMain/>
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -7,10 +8,10 @@
 </template>
 
 <script>
-
+import NavbarMain from '@/components/NavbarMain'
 export default {
   name: 'App',
-
+  components:{NavbarMain},
   data: () => ({
     //
   }),

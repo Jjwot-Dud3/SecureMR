@@ -1,37 +1,37 @@
 <template>
   <div class="home">
-    <h1>Homepage</h1>
-    <!--<v-btn class="pink white--text">Click</v-btn>
-    <v-btn dark color="pink">Click</v-btn>
-    <v-btn depressed dark color="pink">Click</v-btn>-->
-    <v-btn text color="purple">Click me</v-btn> <!--text is equivalent to flat in previous version-->
+    
+    
+      <v-navigation-drawer permanent expand-on-hover>
+        <v-divider></v-divider>
 
-     <v-btn
-      dark
-      small
-      color="primary"
-    >
-      <v-icon left dark>
-        mdi-minus
-      </v-icon>
-      <span>Minus</span>
-    </v-btn>
-     <v-btn
-      class="mx-2"
-      fab
-      dark
-      small
-      color="primary"
-    >
-      <v-icon dark>
-        mdi-minus
-      </v-icon>
-    </v-btn>
-
-    <v-btn outlined small fab dark color="purple">
-      <v-icon>mdi-monitor-star</v-icon> <!--Has to have mdi first to use the icon-->
-    </v-btn>
+        <v-list
+          nav
+          dense
+        >
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-folder</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>My Files</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-account-multiple</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Shared with me</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-star</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Starred</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+    
   </div>
+  
 </template>
 
 <script>
