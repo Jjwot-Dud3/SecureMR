@@ -4,7 +4,7 @@
             <v-img position="left center" max-height="60" max-width="60" :src="require('@/assets/secure-mr-logo.png')"></v-img>
 
             <v-toolbar-title >
-                <span class="font-weight-light">SecureMR</span>    
+                <span class="font-weight-light">‎‎‎‎‎‎‎ ‎ ‎ ‎ ‎ ‎ ‎SecureMR</span>    
             </v-toolbar-title>
             
             <v-spacer></v-spacer>

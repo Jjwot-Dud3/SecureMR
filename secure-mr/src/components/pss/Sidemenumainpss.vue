@@ -17,7 +17,7 @@
             v-model="item.active"
             :prepend-icon="item.action"
             no-action
-            color="accent"
+            color="p3"
           >
           <template v-slot:activator>
             <v-list-item-content>
