@@ -29,9 +29,11 @@
             v-for="child in item.items"
             :key="child.title"
           >
+            
             <v-list-item-content>
               <v-list-item-title v-text="child.title"></v-list-item-title>
             </v-list-item-content>
+            
           </v-list-item>
         </v-list-group>
       </v-list>
@@ -50,7 +52,8 @@ export default {
           action: 'mdi-file-document-outline',
           items: [
             { 
-              title: 'Emitir Documentos' 
+              title: 'Emitir Documentos',
+              action: 'mdi-file-document-outline' 
             },
             { title: 'Consultar Documentos'},
           ],
