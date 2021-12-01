@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import AffiliateBrowseDocuments from '../views/AffiliateBrowseDocuments'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,11 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/affiliate/documents',
+    name: "Consulta de Documentos",
+    component: AffiliateBrowseDocuments
+  }
   //{
     //path: '/about',
     //name: 'About',
