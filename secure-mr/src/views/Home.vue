@@ -1,11 +1,7 @@
 <template>
   <div >
-    
     <Sidemenumainpss/>
-    
-    
   </div>
-  
 </template>
 
 <script>

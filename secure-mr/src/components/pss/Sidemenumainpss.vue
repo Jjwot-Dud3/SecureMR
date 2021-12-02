@@ -28,6 +28,7 @@
           <v-list-item
             v-for="child in item.items"
             :key="child.title"
+            router :to="child.route"
           >
             <v-list-item-content>
               <v-list-item-title v-text="child.title"></v-list-item-title>
@@ -35,8 +36,6 @@
           </v-list-item>
         </v-list-group>
       </v-list>
-
-        
       </v-navigation-drawer>
     </div>
 </template>
@@ -50,15 +49,15 @@ export default {
           action: 'mdi-file-document-outline',
           items: [
             { 
-              title: 'Emitir Documentos' 
+              title: 'Emitir Documentos', route:''
             },
-            { title: 'Consultar Documentos'},
+            { title: 'Consultar Documentos', route: ''},
           ],
           title: 'Documentos',
         },
         {
           action: 'mdi-account-multiple-outline',
-          items: [{ title: 'Consultar Afiliados' }, {title:'Agregar Afiliados'}],
+          items: [{ title: 'Consultar Afiliados', route: '' }, {title:'Agregar Afiliados', route: ''}],
           title: 'Afiliados',
         },
         
