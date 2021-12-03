@@ -7,9 +7,12 @@
           <v-card>
           <v-item-group>
             <v-container>
-              <h2 class="p1--text pa-md-4 mx-lg-auto">
+              <v-row :align-self="center">
+                <h2 class="p1--text pa-md-4 mx-lg-auto" :align-self="center">
                 General
               </h2>
+              </v-row>
+              
               <v-row class="my-auto">
                 <v-col v-for="n in 3" :key="n" cols="12" md="2">
                   <v-item>

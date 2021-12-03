@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import AffiliateBrowseDocuments from '../views/AffiliateBrowseDocuments'
+import AffiliateBrowseTrustedUsers from '../views/AffiliateBrowseTrustedUsers'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,12 @@ const routes = [
     path: '/affiliate/documents',
     name: "Consulta de Documentos",
     component: AffiliateBrowseDocuments
+  }
+  ,
+  {
+    path: '/affiliate/trustedusers',
+    name: "Listado de Personas de Confianza",
+    component: AffiliateBrowseTrustedUsers
   }
   //{
     //path: '/about',
