@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-navigation-drawer absolute permanent expand-on-hover color=primary>
+        <v-navigation-drawer permanent app expand-on-hover color=primary>
         <v-divider></v-divider>
 
         <v-list>

@@ -1,8 +1,8 @@
 <template>
   <v-app style="background: #FFFF;"> <!--Change the backgroun color-->  
     <NavbarMain/>
+    <Sidemenumainpss/>
     <v-content>
-      <Sidemenumainpss/>
       <router-view></router-view>
     </v-content>
   </v-app>

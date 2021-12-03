@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <v-toolbar color="white">
+        <v-app-bar app  color="white">
             <v-img position="left center" max-height="60" max-width="60" :src="require('@/assets/secure-mr-logo.png')"></v-img>
 
             <v-toolbar-title >
@@ -51,7 +51,7 @@
             <v-btn class="mx-2" small fab color="grey darken-1" icon>
                 <v-icon>mdi-cog-outline</v-icon>
             </v-btn>
-        </v-toolbar>
+        </v-app-bar>
         
     </nav>
     
