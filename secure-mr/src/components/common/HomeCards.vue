@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-row class="my-auto">
-                <v-col v-for="n in 3" :key="n" cols="12" md="2">
+                <v-col v-for="item in items" :key="item.title" cols="12" md="2">
                   <v-item>
                   <v-hover>
                       <template v-slot:default="{ hover }">
@@ -13,10 +13,10 @@
                             <v-icon size="80" color="1">mdi-account-multiple</v-icon>
                             <v-card-text>
                               <h2 class="g3--text text-center">
-                                32
+                                {{item.value}}
                               </h2>
                               <p class="g3--text text-center ">
-                                {{username}}
+                                {{item.title}}
                               </p>
                             </v-card-text>
                           </v-layout>
@@ -45,6 +45,6 @@
 <script>
 
 export default {
-    props:['username']
+    props:['items']
 }
 </script>
