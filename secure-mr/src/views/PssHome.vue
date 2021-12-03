@@ -1,7 +1,5 @@
 <template>
   <div >
-    
-    <Sidemenumainpss/>
     <v-container>
           <template>
           <v-card>
@@ -26,10 +24,9 @@
 </template>
 
 <script>
-import Sidemenumainpss from '@/components/pss/Sidemenumainpss'
 import HomeCards from '@/components/common/HomeCards'
 export default {
-    components:{Sidemenumainpss, HomeCards},
+    components:{HomeCards},
      data: () => ({
        general: {
          items:[
