@@ -1,7 +1,7 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="items"
+    :items="documents"
     :items-per-page="10"
     class="elevation-1"
   >
@@ -40,9 +40,10 @@
 
 <script>
   export default {
-    props: ['items'],
+    props: ['documents'],
     data () {
       return {
+        search: '',
         headers: [
           {
             text: 'ID',
@@ -56,88 +57,6 @@
           { text: 'Estado', value: 'state' },
           { text: 'Visualizar', value: 'visualize' },
         ],
-        // items: [
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Pendiente Descarga",
-        //     visualize: false,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Accesible",
-        //     visualize: true,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Accesible",
-        //     visualize: true,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Pendiente Descarga",
-        //     visualize: false,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Pendiente Descarga",
-        //     visualize: false,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Pendiente Descarga",
-        //     visualize: false,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Accesible",
-        //     visualize: true,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Accesible",
-        //     visualize: true,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Pendiente Descarga",
-        //     visualize: false,
-        //   },
-        //   {
-        //     id: '#2458-asgt',
-        //     date: "03/03/12 22:43",
-        //     emitter: "Darrell Williamson",
-        //     description: "Análisis ABC",
-        //     state: "Pendiente Descarga",
-        //     visualize: false,
-        //   },
-        // ],
       }
     },
     methods: {

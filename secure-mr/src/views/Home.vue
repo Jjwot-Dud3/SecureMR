@@ -7,8 +7,8 @@
           <v-card>
           <v-item-group>
             <v-container>
-              <v-row :align-self="center">
-                <h2 class="p1--text pa-md-4 mx-lg-auto" :align-self="center">
+              <v-row>
+                <h2 class="p1--text pa-md-4 mx-lg-auto">
                 General
               </h2>
               </v-row>
