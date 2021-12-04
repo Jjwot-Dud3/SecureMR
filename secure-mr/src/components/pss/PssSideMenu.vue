@@ -4,7 +4,7 @@
       <v-divider></v-divider>
 
       <v-list>
-        <v-list-item>
+        <v-list-item router to="/" color="p3">
           <v-list-item-icon>
             <v-icon>mdi-home</v-icon>
           </v-list-item-icon>

@@ -21,18 +21,23 @@ export default {
           items: [
             { 
               title: 'Consultar Documentos',
-              route: '/affiliate/documents' 
+              route: '/pss/documents/browse/affiliateselect' 
             },
             { 
               title: 'Emitir Documentos',
-              action: 'mdi-file-document-outline' 
+              route: '/pss/documents/create/arsselect' 
             },
           ],
           title: 'Documentos',
         },
         {
           action: 'mdi-account-multiple-outline',
-          items: [{ title: 'Consultar Afiliados' }],
+          items: [
+              { title: 'Consultar Afiliados',
+                route: '/pss/affiliate/browse/affiliateselect'
+              },
+            
+            ],
           title: 'Afiliados',
         },
         
