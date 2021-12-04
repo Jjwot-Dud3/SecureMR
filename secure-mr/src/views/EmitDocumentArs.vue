@@ -1,19 +1,19 @@
 <template>
     <div>
         <Sidemenumainpss/>
-        <CreateSelectListArs :itemList='itemList'/>
+        <CreateDocumentDetails/>
     </div>
 </template>
 
 <script>
 import Sidemenumainpss from '@/components/pss/Sidemenumainpss'
-import CreateSelectListArs from '@/components/common/CreateSelectListArs'
+import CreateDocumentDetails from '@/components/common/CreateDocumentDetails'
 
 export default {
     components:
     {
         Sidemenumainpss,
-        CreateSelectListArs
+        CreateDocumentDetails
     },
     data(){
         return{
