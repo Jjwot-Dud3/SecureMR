@@ -38,6 +38,13 @@
                                         
                                     </div>
                                 </v-radio-group>
+                                <div class="text-center py-5">
+                                    <v-pagination
+                                    v-model="page"
+                                    :length="4"
+                                    circle
+                                    ></v-pagination>
+                                </div>
                             </div>
                         </v-card>
                     </v-form>
