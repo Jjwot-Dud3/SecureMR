@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import PssHome from '../views/PssHome.vue'
+import PssHome from '../views/pss/PssHome.vue'
 import AffiliateBrowseDocuments from '../views/AffiliateBrowseDocuments'
 
 Vue.use(VueRouter)
