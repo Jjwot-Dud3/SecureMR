@@ -2,20 +2,20 @@
     <div>
         <!--<CreateDocumentDetails/>-->
         <!---->
-        <CreateSelectListAffiliate :items="items"/>
+        <PssCreateSelectListAffiliate :items="items"/>
     </div>
 </template>
 
 <script>
 //import CreateDocumentDetails from '@/components/common/CreateDocumentDetails'
-import CreateSelectListAffiliate from '@/components/pss/CreateSelectListAffiliate'
+import PssCreateSelectListAffiliate from '@/components/pss/PssCreateSelectListAffiliate'
 //import CreateSelectListArs from '@/components/common/CreateSelectListArs'
 
 export default {
     components:
     {
         //CreateDocumentDetails,
-        CreateSelectListAffiliate,
+        PssCreateSelectListAffiliate,
         //CreateSelectListArs
     },
     data(){

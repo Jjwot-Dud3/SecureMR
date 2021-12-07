@@ -7,16 +7,15 @@
             <h2 class="p1--text pa-md-4 mx-lg-auto row">
                 Resultados
             </h2>
-            <document-table :documents="documents">
-            </document-table>
+            <AffiliateDocumentTable :documents="documents"/>
         </v-container>
     </div>
 </template>
 
 <script>
-import DocumentTable from '@/components/affiliate/DocumentTable'
+import AffiliateDocumentTable from '@/components/affiliate/AffiliateDocumentTable'
 export default {
-    components:{DocumentTable},
+    components:{AffiliateDocumentTable},
     data() {
         return {
             documents: [
