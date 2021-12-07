@@ -30,8 +30,36 @@
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
+  data:()=>( {
+    items: [
+        {
+          action: 'mdi-file-document-outline',
+          items: [
+            { 
+              title: 'Consultar Documentos',
+              route: '/pss/documents/browse/affiliateselect' 
+            },
+            { 
+              title: 'Emitir Documentos',
+              route: '/pss/documents/create/arsselect' 
+            },
+          ],
+          title: 'Documentos',
+        },
+        {
+          action: 'mdi-account-multiple-outline',
+          items: [
+              { title: 'Consultar Afiliados',
+                route: '/pss/affiliate/browse/affiliateselect'
+              },
+            
+            ],
+          title: 'Afiliados',
+        },
+        
+      ],
+  })
 }
 </script>

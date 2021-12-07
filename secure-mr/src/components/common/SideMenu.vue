@@ -11,7 +11,9 @@
 
           <v-list-item-title>Home</v-list-item-title>
         </v-list-item>
-        
+        <div v-if="role=='pss'">
+        <PssSideMenu/>
+        </div>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -22,8 +24,8 @@ import PssSideMenu from '@/components/pss/PssSideMenuItems'
 export default {
   components:{PssSideMenu},
   props: {
-    items: Object,
-    //currentroute: String
+    role: String,
   },
+  
 };
 </script>
