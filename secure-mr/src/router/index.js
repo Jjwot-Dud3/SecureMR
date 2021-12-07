@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import EmitDocumentArs from "../views/EmitDocumentArs.vue"
 import PssHome from '../views/PssHome.vue'
 import AffiliateBrowseDocuments from '../views/AffiliateBrowseDocuments'
+import AffiliateBrowseTrustedUsers from '../views/AffiliateBrowseTrustedUsers'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,12 @@ const routes = [
     path: '/affiliate/documents',
     name: "Consulta de Documentos",
     component: AffiliateBrowseDocuments
+  }
+  ,
+  {
+    path: '/affiliate/trustedusers',
+    name: "Listado de Personas de Confianza",
+    component: AffiliateBrowseTrustedUsers
   }
   //{
     //path: '/about',

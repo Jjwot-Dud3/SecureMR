@@ -5,6 +5,8 @@ Vue.use(Vuetify,{
     
 });
 
+import es from 'vuetify/lib/locale/es';
+
 export default new Vuetify({
     theme: {
         themes: {
@@ -22,4 +24,8 @@ export default new Vuetify({
           },
         },
       },
+    lang: {
+      locales: {es},
+      current: 'es'
+    }
 });
