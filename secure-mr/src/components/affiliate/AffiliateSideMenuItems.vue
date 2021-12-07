@@ -32,7 +32,7 @@ export default {
           items: [
             { 
               title: 'Consultar Documentos',
-              route: '/pss/documents/browse/affiliateselect' 
+              route: '/affiliate/documents' 
             },
             { 
               title: 'Historial de permisos de documentos',
