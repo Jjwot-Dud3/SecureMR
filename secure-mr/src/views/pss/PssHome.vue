@@ -31,13 +31,18 @@ export default {
        general: {
          items:[
            {
-             title:'Test',
+             title:'Pacientes con documentos emitidos',
              icon:"mdi-account-multiple",
              value:15
            },
            {
-             title:'Test1',
-             icon:"mdi-account-multiple",
+             title:'Documentos con acceso',
+             icon:"mdi-file-document-multiple-outline",
+             value:16
+           },
+           {
+             title:'Documentos que has emitido',
+             icon:"mdi-file-document-multiple-outline",
              value:16
            }
          ]
@@ -45,13 +50,13 @@ export default {
        files:{
          items:[
            {
-             title:'Test',
-             icon:"mdi-account-multiple",
+             title:'Emitir documentos',
+             icon:"mdi-account-multiple-plus-outline",
              value:15
            },
            {
-             title:'Test1',
-             icon:"mdi-account-multiple",
+             title:'Consultar documentos de pacientes',
+             icon:"mdi-file-move-outline",
              value:16
            }
          ]

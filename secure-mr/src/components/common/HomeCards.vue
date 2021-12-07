@@ -10,7 +10,7 @@
                           max-width="244"
                         >
                           <v-layout row justify-center align-center>
-                            <v-icon size="80" color="1">mdi-account-multiple</v-icon>
+                            <v-icon size="80" color="1">{{item.icon}}</v-icon>
                             <v-card-text>
                               <h2 class="g3--text text-center">
                                 {{item.value}}
