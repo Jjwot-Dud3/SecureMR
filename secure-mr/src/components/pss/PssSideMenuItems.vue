@@ -1,23 +1,5 @@
 <template>
   <div>
-    <v-navigation-drawer permanent app expand-on-hover color="primary">
-      <v-divider></v-divider>
-
-      <v-list>
-        <v-list-item router to="/" color="p3">
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-title>Home</v-list-item-title>
-        </v-list-item>
-        <!--<v-list-item>
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-title>{{currentroute}}</v-list-item-title> 
-        </v-list-item>-->
         <v-list-group
           v-for="item in items"
           :key="item.title"
@@ -38,16 +20,41 @@
             </v-list-item-content>
           </v-list-item>
         </v-list-group>
-      </v-list>
-    </v-navigation-drawer>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    items: Object,
-    //currentroute: String
-  },
+  data: () => ({
+    items: [
+        {
+          action: 'mdi-file-document-outline',
+          items: [
+            { 
+              title: 'Consultar Documentos',
+              route: '/pss/documents/browse/affiliateselect' 
+            },
+            { 
+              title: 'Emitir Documentos',
+              route: '/pss/documents/create/arsselect' 
+            },
+          ],
+          title: 'Documentos',
+        },
+        {
+          action: 'mdi-account-multiple-outline',
+          items: [
+              { title: 'Consultar Afiliados',
+                route: '/pss/affiliate/browse/affiliateselect'
+              },
+            
+            ],
+          title: 'Afiliados',
+        },
+        
+      ],
+    //
+  }),
+  
 };
 </script>
