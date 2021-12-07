@@ -4,6 +4,7 @@ import EmitDocumentArs from "../views/pss/PssEmitDocument"
 import PssHome from '../views/pss/PssHome'
 import AffiliateHome from '../views/affiliate/AffiliateHome'
 import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
+import DocumentAccessListPersons from '../views/affiliate/AffiliateBrowseDocumentAccessPersons'
 
 Vue.use(VueRouter)
 
@@ -28,7 +29,12 @@ const routes = [
     path: '/affiliate/documents',
     name: "Consulta de Documentos",
     component: AffiliateBrowseDocuments
-  }
+  },
+  {
+    path: '/affiliate/accessListPersons',
+    name: "DocumentAccessListPersons",
+    component: DocumentAccessListPersons
+  },
   //{
     //path: '/about',
     //name: 'About',

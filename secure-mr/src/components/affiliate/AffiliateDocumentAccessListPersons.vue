@@ -13,15 +13,23 @@
                             <div class="mx-auto">
                                 <v-toolbar class="mx-10 my-5">
                                     <v-container>
-                                        <v-row justify="center">
+                                        <v-row class="pt-4" justify="center">
                                             <v-col cols=10>
-                                                <v-icon>
-                                                    mdi-magnify
-                                                </v-icon>
-                                                <v-text-field class=""
-                                                    color="p1"
-                                                    label="Inserte el nombre de la persona"
-                                                ></v-text-field>
+                                                <v-container>
+                                                    <v-row>
+                                                        <v-col cols=0>
+                                                            <v-icon>
+                                                                mdi-magnify
+                                                            </v-icon>
+                                                        </v-col>
+                                                        <v-col cols=11>
+                                                            <v-text-field class=""
+                                                                color="p1"
+                                                                label="Inserte el nombre de la persona"
+                                                            ></v-text-field>
+                                                        </v-col>
+                                                    </v-row>
+                                                </v-container>
                                             </v-col>
                                             <v-col cols=2>
                                                 <v-combobox
