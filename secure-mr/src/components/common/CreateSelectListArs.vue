@@ -22,7 +22,7 @@
                                 </v-toolbar>
                                 
                                 <v-radio-group>
-                                    <div :key="item.itemName" v-for="item in itemList">
+                                    <div :key="item.itemName" v-for="item in items">
                                         <v-container class="">
                                             <v-row align-content="end" justify="center" class="mx-5">
                                                 <v-col class="lg" sm=6>
@@ -58,7 +58,7 @@
 export default {
     name: "CreateSelectListArs",
     props:  {
-        itemList: Array
+        items: Array
     }
 }
 </script>

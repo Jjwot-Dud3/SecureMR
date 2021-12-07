@@ -1,24 +1,26 @@
 <template>
     <div>
-        <Sidemenumainpss/>
-        <CreateDocumentDetails/>
+        <!--<CreateDocumentDetails/>-->
+        <!---->
+        <CreateSelectListAffiliate :items="items"/>
     </div>
 </template>
 
 <script>
-import Sidemenumainpss from '@/components/pss/Sidemenumainpss'
-import CreateDocumentDetails from '@/components/common/CreateDocumentDetails'
+//import CreateDocumentDetails from '@/components/common/CreateDocumentDetails'
+import CreateSelectListAffiliate from '@/components/common/CreateSelectListAffiliate'
+//import CreateSelectListArs from '@/components/common/CreateSelectListArs'
 
 export default {
     components:
     {
-        Sidemenumainpss,
-        CreateDocumentDetails
+        //CreateDocumentDetails,
+        CreateSelectListAffiliate,
+        //CreateSelectListArs
     },
     data(){
         return{
-            title: "Seleccionar ARS",
-            itemList: [{
+            items: [{
                 itemName: "Nombre",
                 itemSubtitle1: "Subtitulo 1",
                 itemSubtitle2: "Subtitulo 2"

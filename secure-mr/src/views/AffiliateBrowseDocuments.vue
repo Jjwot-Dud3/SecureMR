@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Sidemenumainpss/>
         <v-container >
             <h1 class="p1--text pa-md-2 mx-lg-auto row justify-center align-center">
                 Consultar Documentos
@@ -16,9 +15,8 @@
 
 <script>
 import DocumentTable from '@/components/affiliate/DocumentTable'
-import Sidemenumainpss from '@/components/pss/Sidemenumainpss'
 export default {
-    components:{DocumentTable, Sidemenumainpss},
+    components:{DocumentTable},
     data() {
         return {
             documents: [
