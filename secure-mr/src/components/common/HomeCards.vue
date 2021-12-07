@@ -6,7 +6,7 @@
                   <v-hover>
                       <template v-slot:default="{ hover }">
                         <v-card
-                          class="mx-auto"
+                          class="mx-auto my-5"
                           max-width="244"
                         >
                           <v-layout row justify-center align-center>
