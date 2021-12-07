@@ -37,17 +37,17 @@ export default {
            },
            {
              title:'Personas de confianza',
-             icon:"mdi-account-multiple",
+             icon:"mdi-account-multiple-check",
              value:4
            },
            {
              title:'Documentos en tu historial medico',
-             icon:"mdi-account-multiple",
+             icon:"mdi-file-document-multiple-outline",
              value:13
            },
            {
              title:'Documentos compartidos contigo',
-             icon:"mdi-account-multiple",
+             icon:"mdi-file-document-multiple-outline",
              value:37
            },
            
@@ -57,35 +57,35 @@ export default {
          items:[
            {
              title:'Conceder acceso a documentos',
-             icon:"mdi-account-multiple",
+             icon:"mdi-file-move-outline",
            },
            {
              title:'Revocar acceso a documentos',
-             icon:"mdi-account-multiple",
+             icon:"mdi-file-remove-outline",
            },
            {
              title:'Agregar personas de confianza',
-             icon:"mdi-account-multiple",
+             icon:"mdi-account-multiple-plus-outline",
            },
            {
              title:'Eliminar persona de confianza',
-             icon:"mdi-account-multiple",
+             icon:"mdi-account-multiple-minus-outline",
            },
            {
              title:'Agregar persona a contactos',
-             icon:"mdi-account-multiple",
+             icon:"mdi-account-multiple-plus-outline",
            },
            {
              title:'Consultar historial de permisos',
-             icon:"mdi-account-multiple",
+             icon:"mdi-file-clock-outline",
            },
            {
              title:'Editar informacion personal',
-             icon:"mdi-account-multiple",
+             icon:"mdi-badge-account-horizontal-outline",
            },
            {
              title:'Configuracion',
-             icon:"mdi-account-multiple",
+             icon:"mdi-cog-outline",
            },
 
          ]
