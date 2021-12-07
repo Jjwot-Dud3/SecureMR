@@ -1,20 +1,27 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import EmitDocumentArs from "../views/EmitDocumentArs.vue"
+import PssHome from '../views/PssHome.vue'
+import AffiliateBrowseDocuments from '../views/AffiliateBrowseDocuments'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'PssHome',
+    component: PssHome
   },
   {
     path: '/Pss/EmitDocumentArs',
     name: 'EmitDocumentArs',
     component: EmitDocumentArs
+    
+  }, 
+  {
+    path: '/affiliate/documents',
+    name: "Consulta de Documentos",
+    component: AffiliateBrowseDocuments
   }
   //{
     //path: '/about',
