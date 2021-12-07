@@ -14,6 +14,9 @@
         <div v-if="role=='pss'">
         <PssSideMenuItems/>
         </div>
+        <div v-if="role=='affiliate'">
+        <AffiliateSideMenuItems/>
+        </div>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -21,8 +24,9 @@
 
 <script>
 import PssSideMenuItems from '@/components/pss/PssSideMenuItems'
+import AffiliateSideMenuItems from '@/components/affiliate/AffiliateSideMenuItems'
 export default {
-  components:{PssSideMenuItems},
+  components:{PssSideMenuItems, AffiliateSideMenuItems},
   props: {
     role: String,
   },
