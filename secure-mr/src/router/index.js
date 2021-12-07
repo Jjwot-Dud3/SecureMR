@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import EmitDocumentArs from "../views/EmitDocumentArs.vue"
-import PssHome from '../views/PssHome.vue'
-import AffiliateBrowseDocuments from '../views/AffiliateBrowseDocuments'
-import AffiliateBrowseTrustedUsers from '../views/AffiliateBrowseTrustedUsers'
+import EmitDocumentArs from "../views/pss/PssEmitDocument"
+import PssHome from '../views/pss/PssHome'
+import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
 
 Vue.use(VueRouter)
 
@@ -14,7 +13,7 @@ const routes = [
     component: PssHome
   },
   {
-    path: '/Pss/EmitDocumentArs',
+    path: '/pss/emitDocumentArs',
     name: 'EmitDocumentArs',
     component: EmitDocumentArs
     
@@ -23,12 +22,6 @@ const routes = [
     path: '/affiliate/documents',
     name: "Consulta de Documentos",
     component: AffiliateBrowseDocuments
-  }
-  ,
-  {
-    path: '/affiliate/trustedusers',
-    name: "Listado de Personas de Confianza",
-    component: AffiliateBrowseTrustedUsers
   }
   //{
     //path: '/about',

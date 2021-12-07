@@ -8,7 +8,7 @@
 
 <script>
 //import CreateDocumentDetails from '@/components/common/CreateDocumentDetails'
-import CreateSelectListAffiliate from '@/components/common/CreateSelectListAffiliate'
+import CreateSelectListAffiliate from '@/components/pss/CreateSelectListAffiliate'
 //import CreateSelectListArs from '@/components/common/CreateSelectListArs'
 
 export default {
