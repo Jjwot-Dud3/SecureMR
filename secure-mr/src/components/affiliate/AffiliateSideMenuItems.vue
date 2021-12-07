@@ -45,7 +45,7 @@ export default {
           action: 'mdi-account-multiple-outline',
           items: [
               { title: 'Consultar Personas con Acceso',
-                route: '/pss/affiliate/browse/affiliateselect'
+                route: '/affiliate/accessListPersons'
               },
               { title: 'Consultar Personas de Confianza',
                 route: '/pss/affiliate/browse/affiliateselect'
