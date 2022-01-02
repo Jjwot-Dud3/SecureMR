@@ -17,16 +17,29 @@
       <v-row>
       <v-col cols="12" md="8">
         <v-card-text class="mt-12">
-          <h1 class="text-center display-2 Black--text text--accent-3">Iniciar Sesión</h1>
+          <h2 class="text-center display-2 Black--text text--accent-2">Iniciar Sesión</h2>
+          <div class="text-center mt-lg-15">
+         
           <v-form>
           <v-text-field
-          label="Tu Correo Electronico"
+          label="Tú Correo Electrónico"
           name="Email"
-          prepend icon="email"
+          prepend-icon="email"
           type="text"
-          color="purple lighten-3"/>
-
+          color="purple lighten-3"
+          outlined
+          />
+           <v-text-field
+          label="Contraseña"
+          name="Password"
+          prepend-icon="lock"
+          type="password"
+          color="purple lighten-3"
+          outlined
+          />
+          <v-btn class=" text-center ma-2" large color="purple darken-2" dark >Acceder</v-btn>
           </v-form>
+           </div>
         </v-card-text>
       </v-col>
       <v-col cols="12" md="4"></v-col>
