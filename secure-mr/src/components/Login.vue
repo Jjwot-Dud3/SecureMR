@@ -11,15 +11,14 @@
     <v-container class="fill_height" fluid>
      <v-row align="center" justify="center">
      <v-col cols="12" sm="8" md="8">
-     <v-card class="elevation-12">
+     <v-card class="elevation-12 mt-lg-12">
      <v-window v-model="step">
      <v-window-item :value="1">
       <v-row>
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="6">
         <v-card-text class="mt-12">
-          <h2 class="text-center display-2 Black--text text--accent-2">Iniciar Sesión</h2>
+          <h2 class="text-center font-weight-bold display-2  Black--text text--accent-3">Iniciar Sesión</h2>
           <div class="text-center mt-lg-15">
-         
           <v-form>
           <v-text-field
           label="Tú Correo Electrónico"
@@ -42,7 +41,16 @@
            </div>
         </v-card-text>
       </v-col>
-      <v-col cols="12" md="4"></v-col>
+      <v-col cols="12" md="4" class="white accent-2">
+        <v-card class="white--text mt-12"></v-card>
+        <v-img
+        lazy-src="https://picsum.photos/id/11/10/6"
+        max-height="auto"
+        max-width="auto"
+        src= "../assets/logo.png"
+        ></v-img>
+        <h2 class=" text-center font-weight-light">SecureMR</h2>
+      </v-col>
       </v-row>
       </v-window-item>
      <v-window-item :value="2">
