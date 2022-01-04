@@ -16,7 +16,7 @@ export default {
   components:{NavbarMain, SideMenu},
   computed: {
     currentUsrRole() {
-        return 'affiliate';
+        return 'pss';
     }
   }
 };
