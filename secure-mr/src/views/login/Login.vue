@@ -20,10 +20,10 @@
           <div class="text-center mt-lg-15">
           <v-form>
           <v-text-field
-          label="Tú Correo Electrónico"
+          label="Tú Nombre de Usuario"
           name="email"
           v-model="email"
-          prepend-icon="mdi-email"
+          prepend-icon="mdi-account"
           type="text"
           color="purple lighten-3"
           outlined
@@ -81,12 +81,13 @@ export default {
                 localStorage.userName = response.data.data.userName;
                 localStorage.accessToken = response.data.data.accessToken;
                 localStorage.role = response.data.data.role;
+                localStorage.name = response.data.data.name;
                 this.$http.defaults.headers.common['Authorization'] = "Bearer " + localStorage.getItem('token');
                 this.$router.go()
             }).error(() => {
                 // set error message to incorrect password or username 
             })
-            this.$router.go()
+            this.$router.push({name: 'Home'})
         }
     }
 };

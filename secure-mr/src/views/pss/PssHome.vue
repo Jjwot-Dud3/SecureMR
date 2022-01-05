@@ -10,7 +10,7 @@
               </h2>
               <HomeCards :items= "general.items"/>
               <h2 class="p1--text pa-md-4 mx-lg-auto">
-              Archivos
+                Archivos
               </h2>
               <HomeCards :items="files.items"/>
             </v-container>

@@ -1,8 +1,8 @@
 <template>
     <div>
         <v-container>
-            <v-row>
-                <v-col>
+            <!-- <v-row>
+                <v-col> -->
                     <v-form>
                         
                         <v-card class="my-10" max-width="1500px">
@@ -26,9 +26,9 @@
                                         <v-container class="">
                                             <v-row align-content="end" justify="center" class="mx-5">
                                                 <v-col class="lg" sm=6>
-                                                    <h3>Emisor: {{item.itemName}}</h3>
-                                                    <p class="mb-0">Documento ID: {{item.itemSubtitle1}}</p>
-                                                    <p>Fecha de Solicitud: {{item.itemSubtitle2}}</p>
+                                                    <h3>Nombre: {{item.itemName}}</h3>
+                                                    <p class="mb-0">Edad: {{item.itemSubtitle1}}</p>
+                                                    <p>Afiliado: {{item.itemSubtitle2}}</p>
                                                 </v-col>  
                                                 <v-col class="my-auto pa-0" sm=1>
                                                     <v-btn dark color="p1" router :loading="dialog" @click="dialog=true">Agregar</v-btn>
@@ -48,8 +48,8 @@
                             </div>
                         </v-card>
                     </v-form>
-                </v-col>
-            </v-row>
+                <!-- </v-col>
+            </v-row> -->
             <v-dialog v-model="dialog" hide-overlay persistent width="300">
                 <v-card color="green" dark>
                     <h3 class="d-flex">
@@ -75,8 +75,8 @@ export default {
       dialog (val) {
         if (!val) return
 
-        setTimeout(() => (this.$router.push('/pss/home')), 3000)
+        setTimeout(() => (this.$router.push('/')), 3000)
       },
-    }
+    },
 }
 </script>

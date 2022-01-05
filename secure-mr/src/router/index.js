@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import EmitDocument from "../views/pss/PssEmitDocument"
-import PssHome from '../views/pss/PssHome'
-import AffiliateHome from '../views/affiliate/AffiliateHome'
+import Home from "../views/common/Home"
 import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
 import DocumentAccessListPersons from '../views/affiliate/AffiliateBrowseDocumentAccessPersons'
 import AffiliateBrowseTrustedPersons from '../views/affiliate/AffiliateBrowseTrustedPersons'
@@ -11,7 +10,6 @@ import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
 import AffiliateAddContact from '../views/affiliate/AffiliateAddContact'
 
-import VisualizeDocument from '../views/VisualizeDocument'
 import PssBrowseContactRequest from '../views/pss/PssBrowseContactRequest'
 
 Vue.use(VueRouter)
@@ -19,21 +17,9 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'PssHome',
-    component: PssHome,
-    meta: {requiresAuth: true}
-  },
-  {
-    path: '/visualize/name',
-    name: 'Document Viewer',
-    component: VisualizeDocument,
-    meta: {requiresAuth: true}
-  },
-  {
-    path: '/affiliate/home',
-    name: 'AffiliateHome',
-    component: AffiliateHome,
-    meta: {requiresAuth: true}
+    name: 'Home',
+    component: Home,
+    meta: {requiresAuth: true},
   },
   {
     path: '/pss/emitDocument',

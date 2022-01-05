@@ -48,7 +48,8 @@ export default {
            {
              title:'Documentos compartidos contigo',
              icon:"mdi-file-document-multiple-outline",
-             value:37
+             value:37,
+             route:"/affiliate/documents"
            },
            
          ]
@@ -74,6 +75,7 @@ export default {
            {
              title:'Agregar persona a contactos',
              icon:"mdi-account-multiple-plus-outline",
+             route: '/affiliate/addcontacts'
            },
            {
              title:'Consultar historial de permisos',

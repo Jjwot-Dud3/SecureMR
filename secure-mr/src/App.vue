@@ -46,6 +46,7 @@ export default {
   },
   computed: {
     currentUsrRole() {
+        console.log(localStorage.role)
         return localStorage.role;
     },
     currentUsrInfo(){

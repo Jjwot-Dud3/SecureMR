@@ -48,16 +48,16 @@ export default {
                 route: '/affiliate/accessListPersons'
               },
               { title: 'Consultar Personas de Confianza',
-                route: '/pss/affiliate/browse/affiliateselect'
+                route: '/affiliate/browsetrustedpersons'
               },
               { title: 'Agregar Persona de Confianza',
-                route: '/pss/affiliate/browse/affiliateselect'
+                route: '/affiliate/addtrustedpersons'
               },
               { title: 'Eliminar Persona de Confianza',
                 route: '/pss/affiliate/browse/affiliateselect'
               },
               { title: 'Agregar Persona a Contactos',
-                route: '/pss/affiliate/browse/affiliateselect'
+                route: '/affiliate/addcontacts'
               },
             
             ],

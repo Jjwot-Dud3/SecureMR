@@ -2,7 +2,7 @@
     <div>
         <v-container>
             <v-row justify="center">
-                <v-col cols="10">
+                <v-col>
                     <AffiliateAddContactForm :item="details"/>
                 </v-col>
                 
@@ -45,19 +45,23 @@ export default {
                 name:"Gabriel Santana",
                 id:"402-1730883-8",
                 age:18,
-                NSS:1088976104,
-                ars: "Humano Ars"
+                NSS:78679002,
+                ars: "ARS Humano"
             },
             dialog: false,
         }
         
     },
+    computed:{
+
+    },
     watch: {
       dialog (val) {
         if (!val) return
 
-        setTimeout(() => (this.$router.push('/affiliate/home')), 3000)
+        setTimeout(() => (this.$router.push('/')), 3000)
       },
+
     },
 }
 </script>

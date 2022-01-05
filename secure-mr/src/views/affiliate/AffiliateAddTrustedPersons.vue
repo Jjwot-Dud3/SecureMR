@@ -42,14 +42,26 @@ export default {
     data(){
         return{
             details: {
-                name:"Gabriel Santana",
-                id:"402-1730883-8",
-                age:18,
-                NSS:1088976104,
-                ars: "Humano Ars"
+                name:"Jan Molina",
+                id:"654-4596786-2",
+                age:21,
+                NSS:74579332,
+                ars: "ARS Humano"
             },
+            dialog: false,
         }
         
-    }
+    },
+    computed:{
+
+    },
+    watch: {
+      dialog (val) {
+        if (!val) return
+
+        setTimeout(() => (this.$router.push('/')), 3000)
+      },
+
+    },
 }
 </script>

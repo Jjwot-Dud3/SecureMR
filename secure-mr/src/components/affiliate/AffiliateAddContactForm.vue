@@ -23,7 +23,7 @@
                                                             </v-icon>
                                                         </v-col>
                                                         <v-col cols=11>
-                                                            <v-text-field class=""
+                                                            <v-text-field v-model="search" class=""
                                                                 color="p1"
                                                                 label="Inserte la cedula de la persona"
                                                             ></v-text-field>
@@ -71,12 +71,41 @@
 <script>
 export default {
     name: "AddTrustedContactForm",
-    props:  {
-        item: Object
-    },
     data(){
-        return {
+        return{
+            item: {
+                name:null,
+                id:null,
+                age:null,
+                NSS:null,
+                ars:null
+            },
+            search: ''
+        }
+        
+    },
+    watch: {
+        search(val){
+            if(val == '402-1831893-0') {
+                this.item = {
+                    name:"Gabriel Santana",
+                    id:"402-1730883-8",
+                    age:18,
+                    NSS:1088976104,
+                    ars: "Humano Ars"
+                }
+            } else {
+                this.item = {
+                    name:null,
+                    id:null,
+                    age:null,
+                    NSS:null,
+                    ars:null
+                }
+            }
             
+            
+                
         }
     }
 }

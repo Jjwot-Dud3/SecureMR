@@ -1,6 +1,12 @@
 <template>
     <div>
-        <PssContactList :items="items"/>
+        <v-container>
+            <v-row justify="center"> 
+                <v-col>
+                    <PssContactList :items="items"/>
+                </v-col>
+            </v-row>
+        </v-container>
     </div>
 </template>
 
@@ -16,23 +22,12 @@ export default {
         return{
             items: [
             {
-                itemName: "Bella Jones",
-                itemSubtitle1: "Edad 16",
-                itemSubtitle2: "Rol: Paciente",
+                itemName: "Gabriel Santana",
+                itemSubtitle1: "18",
+                itemSubtitle2: "Afiliado",
                 route: "/pss/affiliate/browse/documents"
             },
-            {
-                itemName: "Bella Jones",
-                itemSubtitle1: "Edad 16",
-                itemSubtitle2: "Rol: Paciente",
-                route: "/pss/affiliate/browse/documents"
-            },
-            {
-                itemName: "Bella Jones",
-                itemSubtitle1: "Edad 16",
-                itemSubtitle2: "Rol: Paciente",
-                route: "/pss/affiliate/browse/documents"
-            },
+            
             ]
         }
         

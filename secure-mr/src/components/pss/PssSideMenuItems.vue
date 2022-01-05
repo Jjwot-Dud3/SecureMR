@@ -47,6 +47,10 @@ export default {
               { title: 'Consultar Afiliados',
                 route: '/pss/affiliate/browse/affiliateselect'
               },
+              {
+                title: 'Contactos',
+                route: '/pss/contacts/requests'
+              }
             
             ],
           title: 'Afiliados',
