@@ -23,7 +23,7 @@
           <v-text-field
           label="Tú Correo Electrónico"
           name="Email"
-          prepend-icon="email"
+          prepend-icon="mdi-email"
           type="text"
           color="purple lighten-3"
           outlined
@@ -31,7 +31,7 @@
            <v-text-field
           label="Contraseña"
           name="Password"
-          prepend-icon="lock"
+          prepend-icon="mdi-lock"
           type="password"
           color="purple lighten-3"
           outlined
