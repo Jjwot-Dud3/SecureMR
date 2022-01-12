@@ -8,6 +8,7 @@ import DocumentAccessListPersons from '../views/affiliate/AffiliateBrowseDocumen
 import AffiliateAddTrustedPersons from '../views/affiliate/AffiliateAddTrustedPersons'
 import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
+import PssEmitDocumentSelectArs from '../views/pss/PssEmitDocumentSelectArs'
 
 Vue.use(VueRouter)
 
@@ -53,6 +54,11 @@ const routes = [
     name: "PssBrowseDocuments",
     component: PssBrowseDocuments
   },
+  {
+    path: '/pss/documents/create/arsselect',
+    name: "PssEmitDocumentSelectArs",
+    component: PssEmitDocumentSelectArs
+  }
 
   //{
     //path: '/about',

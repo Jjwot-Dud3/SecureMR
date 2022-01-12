@@ -4,9 +4,7 @@
             <v-row>
                 <v-col>
                     <v-form>
-                        
                         <v-card class="my-10" max-width="1500px">
-                            
                             <div>
                                 <h1 class="text-center">Seleccionar ARS</h1>
                             </div>
@@ -41,13 +39,30 @@
                                 <div class="text-center py-5">
                                     <v-pagination
                                     v-model="page"
-                                    :length="4"
+                                    :length="1"
                                     circle
                                     ></v-pagination>
                                 </div>
                             </div>
                         </v-card>
                     </v-form>
+                   
+                </v-col>
+            </v-row>
+            <v-row justify="center">
+                <v-col cols='2'>
+                    <v-row>
+                        <v-col>
+                            <v-btn elevation="1" color="p1" dark max-width="100px" router to="/pss/home">
+                                Atras
+                            </v-btn>
+                        </v-col>
+                        <v-col>
+                            <v-btn elevation="1" color="p1" dark max-width="100px" @click="next">
+                                Siguiente
+                            </v-btn>
+                        </v-col>
+                    </v-row>
                 </v-col>
             </v-row>
         </v-container>
@@ -59,6 +74,11 @@ export default {
     name: "CreateSelectListArs",
     props:  {
         items: Array
-    }
+    },
+    methods: {
+        next(){
+            this.$router.push('/pss/home')
+        }
+    },
 }
 </script>
