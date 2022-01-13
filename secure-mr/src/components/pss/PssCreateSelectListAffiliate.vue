@@ -73,7 +73,7 @@ export default {
     name: "PssCreateSelectListAffiliate",
     props:  {
         items: Array
-    }
+    },
     methods: {
         next(){
             this.$router.push('/pss/emitDocumentArs')
