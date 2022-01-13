@@ -9,7 +9,7 @@ import AffiliateAddTrustedPersons from '../views/affiliate/AffiliateAddTrustedPe
 import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
 import PssEmitDocumentSelectArs from '../views/pss/PssEmitDocumentSelectArs'
-
+import PssEmitDocumentSelectAffiliate from '../views/pss/PssEmitDocumentSelectAffiliate'
 Vue.use(VueRouter)
 
 const routes = [
@@ -58,6 +58,11 @@ const routes = [
     path: '/pss/documents/create/arsselect',
     name: "PssEmitDocumentSelectArs",
     component: PssEmitDocumentSelectArs
+  },
+  {
+    path: '/pss/documents/create/affiliateselect',
+    name: "PssEmitDocumentSelectAffiliate",
+    component: PssEmitDocumentSelectAffiliate
   }
 
   //{

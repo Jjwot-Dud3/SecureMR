@@ -4,9 +4,7 @@
             <v-row>
                 <v-col>
                     <v-form>
-                        
                         <v-card class="my-10" max-width="1500px">
-                            
                             <div>
                                 <h1 class="text-center">Seleccionar Afiliado</h1>
                             </div>
@@ -50,15 +48,36 @@
                     </v-form>
                 </v-col>
             </v-row>
+            <v-row justify="center">
+                <v-col cols='2'>
+                    <v-row>
+                        <v-col>
+                            <v-btn elevation="1" color="p1" dark max-width="100px" router to="/pss/documents/create/arsselect">
+                                Atras
+                            </v-btn>
+                        </v-col>
+                        <v-col>
+                            <v-btn elevation="1" color="p1" dark max-width="100px" @click="next">
+                                Siguiente
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
         </v-container>
     </div>
 </template>
 
 <script>
 export default {
-    name: "CreateSelectListArs",
+    name: "PssCreateSelectListAffiliate",
     props:  {
         items: Array
     }
+    methods: {
+        next(){
+            this.$router.push('/pss/emitDocumentArs')
+        }
+    },
 }
 </script>
