@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import PssEmitDocument from "../views/pss/PssEmitDocument"
+import EmitDocumentArs from "../views/pss/PssEmitDocument"
 import PssHome from '../views/pss/PssHome'
 import AffiliateHome from '../views/affiliate/AffiliateHome'
 import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
@@ -8,62 +8,59 @@ import DocumentAccessListPersons from '../views/affiliate/AffiliateBrowseDocumen
 import AffiliateAddTrustedPersons from '../views/affiliate/AffiliateAddTrustedPersons'
 import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
-//import Login from '../views/login/Login'
 
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/login/',
-  //   name: 'Login',
-  //   component: Login
-  // },
   {
-    path: '/pss',
+    path: '/',
     name: 'PssHome',
-    component: PssHome,
-    meta: {requiresAuth: true},
-    children: [
-      {
-        path: 'emitDocument',
-        name: 'PssEmitDocument',
-        component: PssEmitDocument,
-      },
-      {
-        path: 'affiliate/browse/affiliateselect',
-        name: "PssBrowsePatient",
-        component: PssBrowsePatient,
-      },
-      {
-        path: 'affiliate/browse/documents',
-        name: "PssBrowseDocuments",
-        component: PssBrowseDocuments,
-      },
-    ]
+    component: PssHome
   },
   {
-    path: "/affiliate",
+    path: '/affiliate/home',
     name: 'AffiliateHome',
-    component: AffiliateHome,
-    meta: {requiresAuth: true},
-    children: [
-      {
-        path: 'documents',
-        name: "Consulta de Documentos",
-        component: AffiliateBrowseDocuments,
-      },
-      {
-        path: 'accessListPersons',
-        name: "DocumentAccessListPersons",
-        component: DocumentAccessListPersons,
-      },
-      {
-        path: 'addtrustedpersons',
-        name: "AffiliateAddTrustedPersons",
-        component: AffiliateAddTrustedPersons,
-      },
-    ]
+    component: AffiliateHome
   },
+  {
+    path: '/pss/emitDocumentArs',
+    name: 'EmitDocumentArs',
+    component: EmitDocumentArs
+  }, 
+  {
+    path: '/affiliate/documents',
+    name: "Consulta de Documentos",
+    component: AffiliateBrowseDocuments
+  },
+  {
+    path: '/affiliate/accessListPersons',
+    name: "DocumentAccessListPersons",
+    component: DocumentAccessListPersons
+  },
+  {
+    path: '/affiliate/addtrustedpersons',
+    name: "AffiliateAddTrustedPersons",
+    component: AffiliateAddTrustedPersons
+  },
+  {
+    path: '/pss/affiliate/browse/affiliateselect',
+    name: "PssBrowsePatient",
+    component: PssBrowsePatient
+  },
+  {
+    path: '/pss/affiliate/browse/documents',
+    name: "PssBrowseDocuments",
+    component: PssBrowseDocuments
+  },
+
+  //{
+    //path: '/about',
+    //name: 'About',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  //}
 ]
 
 const router = new VueRouter({

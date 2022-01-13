@@ -9,6 +9,8 @@ axios.defaults.headers.common['Authorization'] = "Bearer" + localStorage.getItem
 
 Vue.config.productionTip = false
 
+Vue.prototype.$http = axios;
+
 // check if token is in localstorage
 router.beforeEach((to, from, next) => {
   if(to.meta.requiresAuth) {
@@ -25,6 +27,7 @@ router.beforeEach((to, from, next) => {
 new Vue({
   router,
   vuetify,
+  axios,
   render: h => h(App)
 }).$mount('#app')
 
