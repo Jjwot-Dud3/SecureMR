@@ -77,7 +77,7 @@ export default {
     },
     methods: {
         next(){
-            this.$router.push('/pss/home')
+            this.$router.push('/pss/documents/create/affiliateselect')
         }
     },
 }
