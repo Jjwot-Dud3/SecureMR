@@ -32,27 +32,27 @@ export default {
   components:{NavbarMain, SideMenu, Login, NavbarLogin},
   data() {
     return {
-      token: null,
+      acccessToken: null,
       username: null,
       role: null
     }
   },
   mounted() {
-    if(localStorage.token){
-      this.token = localStorage.acccessToken;
+    if(localStorage.acccessToken){
+      this.acccessToken = localStorage.acccessToken;
       this.username = localStorage.username;
       this.role = localStorage.role;
     }
   },
   computed: {
     currentUsrRole() {
-        return 'affiliate';
+        return localStorage.role;
     },
     currentUsrInfo(){
-      return {username: this.username, token: this.token, role: this.role};
+      return {username: this.username, token: this.acccessToken, role: this.role};
     },
     isUserLoggedIn(){
-      if (localStorage.getItem('acccessToken')){
+      if (localStorage.getItem('accessToken') && localStorage.getItem('userName') && localStorage.getItem('role')){
         return true
       } else {
         return false
@@ -61,18 +61,18 @@ export default {
   },
   methods: {
     persist() {
-      localStorage.acccessToken = this.token;
-      localStorage.username = this.token;
+      localStorage.acccessToken = this.acccessToken;
+      localStorage.username = this.username;
       localStorage.role = this.role;
     },
-    checkToken(token){
-      var returned;
-      axios.get('/accounts/checkToken',{token: token}).then(response => returned = response.data.accessToken).catch(error => {
-        returned = null;
-        console.error("There was an error!",error)
-      })
-      return returned;
-    }
+    // checkToken(token){
+    //   var returned;
+    //   axios.get('/accounts/checkToken',{token: token}).then(response => returned = response.data.accessToken).catch(error => {
+    //     returned = null;
+    //     console.error("There was an error!",error)
+    //   })
+    //   return returned;
+    // }
   }
 };
 </script>

@@ -15,52 +15,51 @@ const routes = [
   {
     path: '/',
     name: 'PssHome',
-    component: PssHome
+    component: PssHome,
+    meta: {requiresAuth: true}
   },
   {
     path: '/affiliate/home',
     name: 'AffiliateHome',
-    component: AffiliateHome
+    component: AffiliateHome,
+    meta: {requiresAuth: true}
   },
   {
     path: '/pss/emitDocumentArs',
     name: 'EmitDocumentArs',
-    component: EmitDocumentArs
+    component: EmitDocumentArs,
+    meta: {requiresAuth: true}
   }, 
   {
     path: '/affiliate/documents',
     name: "Consulta de Documentos",
-    component: AffiliateBrowseDocuments
+    component: AffiliateBrowseDocuments,
+    meta: {requiresAuth: true}
   },
   {
     path: '/affiliate/accessListPersons',
     name: "DocumentAccessListPersons",
-    component: DocumentAccessListPersons
+    component: DocumentAccessListPersons,
+    meta: {requiresAuth: true}
   },
   {
     path: '/affiliate/addtrustedpersons',
     name: "AffiliateAddTrustedPersons",
-    component: AffiliateAddTrustedPersons
+    component: AffiliateAddTrustedPersons,
+    meta: {requiresAuth: true}
   },
   {
     path: '/pss/affiliate/browse/affiliateselect',
     name: "PssBrowsePatient",
-    component: PssBrowsePatient
+    component: PssBrowsePatient,
+    meta: {requiresAuth: true}
   },
   {
     path: '/pss/affiliate/browse/documents',
     name: "PssBrowseDocuments",
-    component: PssBrowseDocuments
+    component: PssBrowseDocuments,
+    meta: {requiresAuth: true}
   },
-
-  //{
-    //path: '/about',
-    //name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  //}
 ]
 
 const router = new VueRouter({

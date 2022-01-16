@@ -81,8 +81,10 @@ export default {
                 localStorage.userName = response.data.data.userName;
                 localStorage.accessToken = response.data.data.accessToken;
                 localStorage.role = response.data.data.role;
+                this.$router.go()
+            }).error(() => {
+                // set error message to incorrect password or username 
             })
-            console.log(localStorage.userName)
         }
     }
 };
