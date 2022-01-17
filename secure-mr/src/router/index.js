@@ -5,6 +5,7 @@ import PssHome from '../views/pss/PssHome'
 import AffiliateHome from '../views/affiliate/AffiliateHome'
 import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
 import DocumentAccessListPersons from '../views/affiliate/AffiliateBrowseDocumentAccessPersons'
+import AffiliateBrowseTrustedPersons from '../views/affiliate/AffiliateBrowseTrustedPersons'
 import AffiliateAddTrustedPersons from '../views/affiliate/AffiliateAddTrustedPersons'
 import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
@@ -36,6 +37,11 @@ const routes = [
     path: '/affiliate/accessListPersons',
     name: "DocumentAccessListPersons",
     component: DocumentAccessListPersons
+  },
+  {
+    path: '/affiliate/browsetrustedpersons',
+    name: "BrowseTrustedPersons",
+    component: AffiliateBrowseTrustedPersons
   },
   {
     path: '/affiliate/addtrustedpersons',

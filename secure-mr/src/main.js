@@ -4,7 +4,7 @@ import router from './router'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.baseURL = 'https://secure-mr-api.herokuapp.com';
 axios.defaults.headers.common['Authorization'] = "Bearer" + localStorage.getItem('token');
 
 Vue.config.productionTip = false
