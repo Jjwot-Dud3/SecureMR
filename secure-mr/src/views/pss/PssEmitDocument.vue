@@ -1,11 +1,3 @@
-<!--<template>
-    <div>
-        <CreateDocumentDetails/>
-        
-        <PssCreateSelectListAffiliate :items="items"/>
-    </div>
-</template>-->
-
 <template>
     <div>
         <v-container>
