@@ -1,13 +1,8 @@
 <template>
     <div>
         <v-container>
-            <v-row>
-                <v-col>
                     <v-form>
-                        <v-card class="my-10" max-width="1500px">
-                            <div>
-                                <h1 class="text-center">Seleccionar ARS</h1>
-                            </div>
+                        
                             <div class="mx-auto">
                                 <v-toolbar class="mx-10 my-5">
                                     <v-icon>
@@ -44,27 +39,9 @@
                                     ></v-pagination>
                                 </div>
                             </div>
-                        </v-card>
+                        
                     </v-form>
                    
-                </v-col>
-            </v-row>
-            <v-row justify="center">
-                <v-col cols='2'>
-                    <v-row>
-                        <v-col>
-                            <v-btn elevation="1" color="p1" dark max-width="100px" router to="/pss/home">
-                                Atras
-                            </v-btn>
-                        </v-col>
-                        <v-col>
-                            <v-btn elevation="1" color="p1" dark max-width="100px" @click="next">
-                                Siguiente
-                            </v-btn>
-                        </v-col>
-                    </v-row>
-                </v-col>
-            </v-row>
         </v-container>
     </div>
 </template>

@@ -1,10 +1,8 @@
 <template>
     <div>
         <v-container>
-            <v-card class="my-10 pa-10">            
                 <v-form>
                     <v-card >
-                        <h1 class="text-center py-7">Emisión de Documentos</h1>
                         <v-row justify-sm="center">
                             <v-col cols=6>
                                 <v-container>
@@ -93,7 +91,7 @@
                         </v-row>
                     </v-card>
                 </v-form>
-            </v-card>
+            
         </v-container>
             
         
