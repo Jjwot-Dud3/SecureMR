@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import EmitDocumentArs from "../views/pss/PssEmitDocument"
+import EmitDocument from "../views/pss/PssEmitDocument"
 import PssHome from '../views/pss/PssHome'
 import AffiliateHome from '../views/affiliate/AffiliateHome'
 import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
@@ -24,9 +24,9 @@ const routes = [
     component: AffiliateHome
   },
   {
-    path: '/pss/emitDocumentArs',
-    name: 'EmitDocumentArs',
-    component: EmitDocumentArs
+    path: '/pss/documents/emit',
+    name: 'EmitDocument',
+    component: EmitDocument
     
   }, 
   {
