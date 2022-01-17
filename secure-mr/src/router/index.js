@@ -10,6 +10,7 @@ import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
 import PssEmitDocumentSelectArs from '../views/pss/PssEmitDocumentSelectArs'
 import PssEmitDocumentSelectAffiliate from '../views/pss/PssEmitDocumentSelectAffiliate'
+import AffiliateAddContact from '../views/affiliate/AffiliateAddContact'
 Vue.use(VueRouter)
 
 const routes = [
@@ -63,8 +64,12 @@ const routes = [
     path: '/pss/documents/create/affiliateselect',
     name: "PssEmitDocumentSelectAffiliate",
     component: PssEmitDocumentSelectAffiliate
-  }
-
+  },
+  {
+    path: '/affiliate/addcontacts',
+    name: "AffiliateAddContact",
+    component: AffiliateAddContact
+  },
   //{
     //path: '/about',
     //name: 'About',

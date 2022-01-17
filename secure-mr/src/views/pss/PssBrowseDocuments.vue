@@ -1,19 +1,24 @@
 <template>
     <div>
         <v-container >
-          <v-card class="my-10 pa-10">
-            <h1 class="p1--text pa-md-2 mx-lg-auto row justify-center align-center">
-                Consultar Documentos
-            </h1>
-            <h2 class="p1--text pa-md-4 mx-lg-auto row">
-                Información General del Paciente
-            </h2>
-            <PssBrowseDocumentsUserDetails :item="details"/>
-            <h2 class="p1--text pa-md-4 mx-lg-auto row">
-                Resultados
-            </h2>
-            <PssDocumentTable :documents="documents"/>
+        <v-row justify="center">
+          <v-col>
+            <v-card class="my-10 pa-10">
+              <h1 class="p1--text pa-md-2 mx-lg-auto row justify-center align-center">
+                  Consultar Documentos
+              </h1>
+              <h2 class="p1--text pa-md-4 mx-lg-auto row">
+                  Información General del Paciente
+              </h2>
+              <PssBrowseDocumentsUserDetails :item="details"/>
+              <h2 class="p1--text pa-md-4 mx-lg-auto row">
+                  Resultados
+              </h2>
+              <PssDocumentTable :documents="documents"/>
           </v-card>
+          </v-col>
+        </v-row>
+          
         </v-container>
     </div>
 </template>
