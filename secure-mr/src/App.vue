@@ -23,7 +23,7 @@ import Login from '@/views/login/Login.vue'
 import axios from 'axios'
 
 axios.defaults.baseURL = 'http://localhost:8000';
-axios.defaults.headers.common['Authorization'] = "Bearer" + localStorage.getItem('token');
+axios.defaults.headers.common['Authorization'] = "Bearer" + localStorage.getItem('accessToken');
 
 //import User from './classes/User'
 
