@@ -20,6 +20,10 @@ import NavbarMain from '@/components/common/NavbarMain'
 import NavbarLogin from '@/components/common/login/NavbarLogin'
 import SideMenu from '@/components/common/SideMenu'
 import Login from '@/views/login/Login.vue'
+import axios from 'axios'
+
+axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.headers.common['Authorization'] = "Bearer " + localStorage.getItem('accessToken');
 
 //import User from './classes/User'
 
