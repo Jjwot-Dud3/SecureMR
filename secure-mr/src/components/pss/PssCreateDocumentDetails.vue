@@ -63,7 +63,6 @@
                                         color="p2"
                                         counter
                                         label="Lista de archivos"
-                                        multiple
                                         placeholder="Selecciona los archivos que deseas adjuntar"
                                         prepend-icon="mdi-paperclip"
                                         outlined
