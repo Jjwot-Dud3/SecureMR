@@ -15,10 +15,10 @@
                             </v-row>
                             <v-row>
                                 <v-col>
-                                    <v-text-field hint="Cedula" :value="item.id" persistent-hint readonly></v-text-field>
+                                    <v-text-field hint="Cedula" :value="item.idNumber" persistent-hint readonly></v-text-field>
                                 </v-col>
                                 <v-col>
-                                    <v-text-field hint="NSS" :value="item.NSS" persistent-hint readonly></v-text-field>
+                                    <v-text-field hint="NSS" :value="item.ssn" persistent-hint readonly></v-text-field>
                                 </v-col>
                             </v-row>
                             <v-row>

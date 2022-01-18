@@ -16,21 +16,20 @@
                                     ></v-text-field>
                                 </v-toolbar>
                                 
-                                <v-radio-group>
-                                    <div :key="item.itemName" v-for="item in items">
+                                <v-radio-group v-model="selected" >
+                                    <div :key="item.id" v-for="item in items">
                                         <v-container class="">
                                             <v-row align-content="end" justify="center" class="mx-5">
                                                 <v-col class="lg" sm=6>
                                                     <h3>{{item.itemName}}</h3>
-                                                    <p class="mb-0">{{item.itemSubtitle1}}</p>
+                                                    <p class="mb-0">{{item.itemSubtitle1}} {{selected}}</p>
                                                     <p>{{item.itemSubtitle2}}</p>
                                                 </v-col>  
                                                 <v-col class="my-auto pa-0" sm=1>
-                                                    <v-radio color="p1"></v-radio>
+                                                    <v-radio color="p1" :value="item.id" ></v-radio>
                                                 </v-col>
                                             </v-row>
                                         </v-container>
-                                        
                                     </div>
                                 </v-radio-group>
                                 <div class="text-center py-5">
@@ -54,10 +53,15 @@ export default {
     props:  {
         items: Array
     },
+    data: () => ({
+        selected: '',
+        group:{id:1},
+        
+    }),
     methods: {
         next(){
             this.$router.push('/pss/emitDocumentArs')
-        }
+        },
     },
 }
 </script>

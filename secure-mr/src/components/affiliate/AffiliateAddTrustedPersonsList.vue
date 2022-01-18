@@ -4,9 +4,7 @@
             <v-row>
                 <v-col>
                     <v-form>
-                        
                         <v-card class="my-10" max-width="1500px">
-                            
                             <div>
                                 <h1 class="text-center">Agregar personas de confianza</h1>
                             </div>

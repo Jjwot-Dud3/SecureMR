@@ -99,6 +99,13 @@ export default {
     data(){
         return{
             items: [{
+                id: 1,
+                itemName: "Nombre",
+                itemSubtitle1: "Subtitulo 1",
+                itemSubtitle2: "Subtitulo 2"
+            },{
+            
+                id: 2,
                 itemName: "Nombre",
                 itemSubtitle1: "Subtitulo 1",
                 itemSubtitle2: "Subtitulo 2"

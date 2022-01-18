@@ -32,9 +32,9 @@ export default {
         return {
             details: {
                 name:"Gabriel Santana",
-                id:"402-1730883-8",
-                age:18,
-                NSS:1088976104,
+                idNumber:"402-1730883-8",
+                age:"18",
+                ssn:"1088976104",
                 ars: "Humano Ars"
             },
             documents: [
