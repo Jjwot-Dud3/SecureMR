@@ -12,20 +12,19 @@ export default {
     {
         TrustedPersonsList,
     },
-    
-    created(){
-        this.$http.get('/privacy/affiliate/trustedusers/get')
-            .then(response => {
-                this.items = [response.data.data.trustedUsers];
-            })
-            console.log(this.items)
-    },
 
     data(){
         return{
             items: []
         }
         
+    },
+    
+    created(){
+        this.$http.get('/privacy/affiliate/trustedusers/get')
+            .then(response => {
+                this.items = response.data.data.concat(response.data.data);
+            })
     }
 }
 </script>
