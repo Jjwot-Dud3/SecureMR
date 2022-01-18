@@ -5,6 +5,7 @@ import PssHome from '../views/pss/PssHome'
 import AffiliateHome from '../views/affiliate/AffiliateHome'
 import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
 import DocumentAccessListPersons from '../views/affiliate/AffiliateBrowseDocumentAccessPersons'
+import AffiliateBrowseTrustedPersons from '../views/affiliate/AffiliateBrowseTrustedPersons'
 import AffiliateAddTrustedPersons from '../views/affiliate/AffiliateAddTrustedPersons'
 import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
@@ -13,46 +14,59 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/pss/home',
+    path: '/',
     name: 'PssHome',
-    component: PssHome
+    component: PssHome,
+    meta: {requiresAuth: true}
   },
   {
     path: '/affiliate/home',
     name: 'AffiliateHome',
-    component: AffiliateHome
+    component: AffiliateHome,
+    meta: {requiresAuth: true}
   },
   {
-    path: '/pss/documents/emit',
-    name: 'EmitDocument',
-    component: EmitDocument
-    
+    path: '/pss/emitDocumentArs',
+    name: 'EmitDocumentArs',
+    component: EmitDocumentArs,
+    meta: {requiresAuth: true}
   }, 
   {
     path: '/affiliate/documents',
     name: "Consulta de Documentos",
-    component: AffiliateBrowseDocuments
+    component: AffiliateBrowseDocuments,
+    meta: {requiresAuth: true}
   },
   {
     path: '/affiliate/accessListPersons',
     name: "DocumentAccessListPersons",
-    component: DocumentAccessListPersons
+    component: DocumentAccessListPersons,
+    meta: {requiresAuth: true}
+  },
+  {
+    path: '/affiliate/browsetrustedpersons',
+    name: "BrowseTrustedPersons",
+    component: AffiliateBrowseTrustedPersons
   },
   {
     path: '/affiliate/addtrustedpersons',
     name: "AffiliateAddTrustedPersons",
-    component: AffiliateAddTrustedPersons
+    component: AffiliateAddTrustedPersons,
+    meta: {requiresAuth: true}
   },
   {
     path: '/pss/affiliate/browse/affiliateselect',
     name: "PssBrowsePatient",
-    component: PssBrowsePatient
+    component: PssBrowsePatient,
+    meta: {requiresAuth: true}
   },
   {
     path: '/pss/affiliate/browse/documents',
     name: "PssBrowseDocuments",
-    component: PssBrowseDocuments
+    component: PssBrowseDocuments,
+    meta: {requiresAuth: true}
   },
+<<<<<<< HEAD
 
   {
     path: '/affiliate/addcontacts',
@@ -67,6 +81,8 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   //}
+=======
+>>>>>>> develop/integration
 ]
 
 const router = new VueRouter({

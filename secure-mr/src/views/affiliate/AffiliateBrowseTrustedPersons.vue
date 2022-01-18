@@ -12,25 +12,18 @@ export default {
     {
         TrustedPersonsList,
     },
+    
+    created(){
+        this.$http.get('/privacy/affiliate/trustedusers/get')
+            .then(response => {
+                this.items = [response.data.data.trustedUsers];
+            })
+            console.log(this.items)
+    },
+
     data(){
         return{
-            items: [
-            {
-                itemName: "Bella Jones",
-                itemSubtitle1: "Edad 16",
-                itemSubtitle2: "Rol: Paciente"
-            },
-            {
-                itemName: "Bella Jones",
-                itemSubtitle1: "Edad 16",
-                itemSubtitle2: "Rol: Paciente"
-            },
-            {
-                itemName: "Bella Jones",
-                itemSubtitle1: "Edad 16",
-                itemSubtitle2: "Rol: Paciente"
-            },
-            ]
+            items: []
         }
         
     }
