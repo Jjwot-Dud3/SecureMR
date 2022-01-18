@@ -19,7 +19,7 @@
                         </v-stepper-header>
                         <v-stepper-items>
                             <v-stepper-content step="1">
-                                <CreateSelectListArs :items="items"/>
+                                <CreateSelectListArs :items="ars"/>
                                 <v-row justify="center">
                                     <v-col cols='2'>
                                         <v-row>
@@ -38,7 +38,7 @@
                                 </v-row>
                             </v-stepper-content>
                             <v-stepper-content step="2">
-                                <CreateSelectListAffiliate :items="items"/>
+                                <CreateSelectListAffiliate :items="affiliate"/>
                                 <v-row justify="center">
                                     <v-col cols='2'>
                                         <v-row>
@@ -57,6 +57,9 @@
                                 </v-row>
                                 
                             </v-stepper-content>
+
+                            
+
                             <v-stepper-content step="3">
                                 <CreateDocumentDetails :items="items"/>
                                 <v-row justify="center">
@@ -68,7 +71,7 @@
                                                 </v-btn>
                                             </v-col>
                                             <v-col>
-                                                <v-btn elevation="1" color="p1" dark max-width="100px" @click="e1 = 3">
+                                                <v-btn elevation="1" color="p1" dark max-width="100px" :disabled="dialog" :loading="dialog" @click="dialog=true" router>
                                                     Siguiente
                                                 </v-btn>
                                             </v-col>
@@ -80,8 +83,29 @@
                     </v-stepper>
                 </v-col>
             </v-row>
+            <v-dialog
+            v-model="dialog"
+            hide-overlay
+            persistent
+            width="300"
+            >
+                <v-card
+                    color="p1"
+                    dark
+                >
+                    <v-card-text text-color="primary">
+                    Subiendo...
+                    <v-progress-linear
+                        indeterminate
+                        color="white"
+                        class="mb-0"
+                    ></v-progress-linear>
+                    </v-card-text>
+                </v-card>
+            </v-dialog>
         </v-container>
     </div>
+    
 </template>
 
 <script>
@@ -98,21 +122,48 @@ export default {
     },
     data(){
         return{
-            items: [{
+            ars: [{
                 id: 1,
-                itemName: "Nombre",
-                itemSubtitle1: "Subtitulo 1",
-                itemSubtitle2: "Subtitulo 2"
+                itemName: "ARS Humano",
+                itemSubtitle1: "contacto@arshumano.com",
+                itemSubtitle2: "Av. Lope De Vega Esq. C. Fantino Falco"
             },{
             
                 id: 2,
-                itemName: "Nombre",
-                itemSubtitle1: "Subtitulo 1",
-                itemSubtitle2: "Subtitulo 2"
+                itemName: "BHD Mapfre",
+                itemSubtitle1: "contacto@bhdmapfre.com",
+                itemSubtitle2: "Av. Abraham Lincoln 952"
+            },
+            {
+                id: 3,
+                itemName: "ARS Reservas",
+                itemSubtitle1: "contacto@arsreservas.com",
+                itemSubtitle2: "Calle Desiderio Arias 75"
+            },
+            {
+                id: 4,
+                itemName: "ARS Universal",
+                itemSubtitle1: "contacto@arsuniversal.com",
+                itemSubtitle2: "Av. Lope De Vega Esq. C. Fantino Falco"
+            }],
+            affiliate: [{
+                id: 1,
+                itemName: "Gabriel Santana",
+                itemSubtitle1: "gabrielsantana@gmail.com",
+                itemSubtitle2: "322-8596786-6"
             }],
             e1: 1,
+            dialog: false,
+
         }
         
-    }
+    },
+    watch: {
+      dialog (val) {
+        if (!val) return
+
+        setTimeout(() => (this.$router.push('/pss/home')), 3000)
+      },
+    },
 }
 </script>

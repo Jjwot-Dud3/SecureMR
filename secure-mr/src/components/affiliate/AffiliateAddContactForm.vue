@@ -8,7 +8,7 @@
                         <v-card class="my-10" max-width="1500px">
                             
                             <div>
-                                <h1 class="text-center">Agregar personas de confianza</h1>
+                                <h1 class="text-center">Agregar Contacto</h1>
                             </div>
                             <div class="mx-auto">
                                 <v-toolbar class="mx-10 my-5">
@@ -25,7 +25,7 @@
                                                         <v-col cols=11>
                                                             <v-text-field class=""
                                                                 color="p1"
-                                                                label="Inserte el nombre de la persona"
+                                                                label="Inserte el correo de la persona"
                                                             ></v-text-field>
                                                         </v-col>
                                                     </v-row>
@@ -41,25 +41,17 @@
                                     <v-row justify-sm="left">
                                         <v-col cols="8">
                                         <v-container>
-                                            <v-row>
-                                                    <v-col>
+                                            <v-row justify="center">
+                                                    <v-col >
                                                         <v-text-field hint="Nombre" :value="item.name" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                     <v-col>
-                                                        <v-text-field hint="Edad" :value="item.age" persistent-hint readonly></v-text-field>
+                                                        <v-text-field hint="ID" :value="item.id" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                 </v-row>
                                                 <v-row>
                                                     <v-col>
-                                                        <v-text-field hint="Cedula" :value="item.id" persistent-hint readonly></v-text-field>
-                                                    </v-col>
-                                                    <v-col>
-                                                        <v-text-field hint="NSS" :value="item.NSS" persistent-hint readonly></v-text-field>
-                                                    </v-col>
-                                                </v-row>
-                                                <v-row>
-                                                    <v-col>
-                                                        <v-text-field hint="ARS" :value="item.ars" persistent-hint readonly></v-text-field>
+                                                        <v-text-field hint="Rol" :value="item.id" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                 </v-row>
                                             </v-container> 

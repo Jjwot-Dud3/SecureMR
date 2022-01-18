@@ -9,16 +9,22 @@
             </v-row>
             <v-row justify="center">
                 <v-col cols="1">
-                    <v-btn
-                        elevation="1"
-                        color="p1"
-                        dark
-                    >
+                    <v-btn elevation="1" color="p1" dark :loading="dialog" @click="dialog=true" router>
                         Agregar
                     </v-btn>
                 </v-col>
-                
             </v-row>
+
+            
+            
+            <v-dialog v-model="dialog" hide-overlay persistent width="300">
+                <v-card color="green" dark>
+                    <h3 class="d-flex">
+                    <v-icon>mdi-check</v-icon>
+                    Success
+                    </h3>
+                </v-card>
+            </v-dialog>
         </v-container>
         
     </div>
@@ -42,8 +48,16 @@ export default {
                 NSS:1088976104,
                 ars: "Humano Ars"
             },
+            dialog: false,
         }
         
-    }
+    },
+    watch: {
+      dialog (val) {
+        if (!val) return
+
+        setTimeout(() => (this.$router.push('/pss/home')), 3000)
+      },
+    },
 }
 </script>

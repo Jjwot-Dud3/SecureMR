@@ -33,17 +33,20 @@ export default {
            {
              title:'Pacientes con documentos emitidos',
              icon:"mdi-account-multiple",
-             value:15
+             value:15,
+             route:'/pss/affiliate/browse/affiliateselect'
            },
            {
              title:'Documentos con acceso',
              icon:"mdi-file-document-multiple-outline",
-             value:16
+             value:16,
+             route:'/pss/affiliate/browse/documents'
            },
            {
              title:'Documentos que has emitido',
              icon:"mdi-file-document-multiple-outline",
-             value:16
+             value:16,
+             route:''
            }
          ]
        },
@@ -52,7 +55,8 @@ export default {
            {
              title:'Emitir documentos',
              icon:"mdi-account-multiple-plus-outline",
-             value:15
+             value:15,
+             route:'/pss/emitDocument'
            },
            {
              title:'Consultar documentos de pacientes',

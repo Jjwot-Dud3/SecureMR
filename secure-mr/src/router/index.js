@@ -10,6 +10,10 @@ import AffiliateAddTrustedPersons from '../views/affiliate/AffiliateAddTrustedPe
 import PssBrowsePatient from '../views/pss/PssBrowsePatient'
 import PssBrowseDocuments from '../views/pss/PssBrowseDocuments'
 import AffiliateAddContact from '../views/affiliate/AffiliateAddContact'
+
+import VisualizeDocument from '../views/VisualizeDocument'
+import PssBrowseContactRequest from '../views/pss/PssBrowseContactRequest'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,14 +24,20 @@ const routes = [
     meta: {requiresAuth: true}
   },
   {
+    path: '/visualize/name',
+    name: 'Document Viewer',
+    component: VisualizeDocument,
+    meta: {requiresAuth: true}
+  },
+  {
     path: '/affiliate/home',
     name: 'AffiliateHome',
     component: AffiliateHome,
     meta: {requiresAuth: true}
   },
   {
-    path: '/pss/emitDocumentArs',
-    name: 'EmitDocumentArs',
+    path: '/pss/emitDocument',
+    name: 'EmitDocument',
     component: EmitDocument,
     meta: {requiresAuth: true}
   }, 
@@ -70,6 +80,11 @@ const routes = [
     path: '/affiliate/addcontacts',
     name: "AffiliateAddContact",
     component: AffiliateAddContact
+  },
+  {
+    path: '/pss/contacts/requests',
+    name: "PssBrowseContactRequest",
+    component: PssBrowseContactRequest
   },
   //{
     //path: '/about',

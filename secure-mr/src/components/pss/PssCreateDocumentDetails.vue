@@ -21,7 +21,7 @@
                                             <h3>Tipo de Documento:</h3>
                                             <v-autocomplete
                                                 v-model="value"
-                                                :items="items"
+                                                :items="types"
                                                 dense
                                                 outlined
                                                 color="p1"
@@ -39,8 +39,7 @@
                                                 clearable
                                                 color="p1"
                                                 name="input-7-1"
-                                                value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
-                                                hint="*Indica comentarios acerca del documento"
+                                                placeholder="*Indica comentarios acerca del documento"
                                             ></v-textarea>
                                         </v-col>
                                     </v-row>
@@ -101,10 +100,11 @@
 export default {
     name: "CreateDocumentDetails",
     props:  {
-        itemList: Array
+        items: Array
     },
     data: () => ({
       files: [],
+      types: ["Resultados","Resumen de Consulta","Receta","Licencias","Analísis Ortopedico"],
       picker: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
     }),
 }

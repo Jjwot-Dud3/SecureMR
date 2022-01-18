@@ -1,10 +1,15 @@
 <template>
     <div>
         <v-container>
-            
+            <v-row>
+                <v-col>
                     <v-form>
                         
+                        <v-card class="my-10" max-width="1500px">
                             
+                            <div>
+                                <h1 class="text-center">Listado de Solicitudes de Contacto</h1>
+                            </div>
                             <div class="mx-auto">
                                 <v-toolbar class="mx-10 my-5">
                                     <v-icon>
@@ -16,20 +21,21 @@
                                     ></v-text-field>
                                 </v-toolbar>
                                 
-                                <v-radio-group v-model="selected" >
-                                    <div :key="item.id" v-for="item in items">
+                                <v-radio-group>
+                                    <div :key="item.itemName" v-for="item in items">
                                         <v-container class="">
                                             <v-row align-content="end" justify="center" class="mx-5">
                                                 <v-col class="lg" sm=6>
-                                                    <h3>{{item.itemName}}</h3>
-                                                    <p class="mb-0">{{item.itemSubtitle1}}</p>
-                                                    <p>{{item.itemSubtitle2}}</p>
+                                                    <h3>Emisor: {{item.itemName}}</h3>
+                                                    <p class="mb-0">Documento ID: {{item.itemSubtitle1}}</p>
+                                                    <p>Fecha de Solicitud: {{item.itemSubtitle2}}</p>
                                                 </v-col>  
                                                 <v-col class="my-auto pa-0" sm=1>
-                                                    <v-radio color="p1" :value="item.id" ></v-radio>
+                                                    <v-btn dark color="p1" router :loading="dialog" @click="dialog=true">Agregar</v-btn>
                                                 </v-col>
                                             </v-row>
                                         </v-container>
+                                        
                                     </div>
                                 </v-radio-group>
                                 <div class="text-center py-5">
@@ -40,28 +46,37 @@
                                     ></v-pagination>
                                 </div>
                             </div>
-                    
+                        </v-card>
                     </v-form>
-                
+                </v-col>
+            </v-row>
+            <v-dialog v-model="dialog" hide-overlay persistent width="300">
+                <v-card color="green" dark>
+                    <h3 class="d-flex">
+                    <v-icon>mdi-check</v-icon>
+                    Success
+                    </h3>
+                </v-card>
+            </v-dialog>
         </v-container>
     </div>
 </template>
 
 <script>
 export default {
-    name: "PssCreateSelectListAffiliate",
+    name: "PssContactList",
     props:  {
         items: Array
     },
-    data: () => ({
-        selected: '',
-        group:{id:1},
-        
-    }),
-    methods: {
-        next(){
-            this.$router.push('/pss/emitDocumentArs')
-        },
-    },
+    data(){return {
+        dialog: false
+    }},
+    watch: {
+      dialog (val) {
+        if (!val) return
+
+        setTimeout(() => (this.$router.push('/pss/home')), 3000)
+      },
+    }
 }
 </script>

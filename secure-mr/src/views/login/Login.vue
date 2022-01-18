@@ -86,6 +86,7 @@ export default {
             }).error(() => {
                 // set error message to incorrect password or username 
             })
+            this.$router.go()
         }
     }
 };

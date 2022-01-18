@@ -12,9 +12,9 @@
                           <v-layout row justify-center align-center>
                             <v-icon size="80" color="1">{{item.icon}}</v-icon>
                             <v-card-text>
-                              <h2 class="g3--text text-center">
+                              <!-- <h2 class="g3--text text-center">
                                 {{item.value}}
-                              </h2>
+                              </h2> -->
                               <p class="g3--text text-center ">
                                 {{item.title}}
                               </p>
@@ -29,7 +29,7 @@
                               absolute
                               color="p1"
                             >
-                              <v-btn>See more info</v-btn>
+                              <v-btn router :to='item.route'>Navegar</v-btn>
                             </v-overlay>
                           </v-fade-transition>
                         </v-card>
