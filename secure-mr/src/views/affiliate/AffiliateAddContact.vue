@@ -56,7 +56,7 @@ export default {
       dialog (val) {
         if (!val) return
 
-        setTimeout(() => (this.$router.push('/pss/home')), 3000)
+        setTimeout(() => (this.$router.push('/affiliate/home')), 3000)
       },
     },
 }
