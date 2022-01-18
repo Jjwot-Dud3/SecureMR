@@ -45,13 +45,13 @@
                                 </v-toolbar>
                                 
                                 <v-radio-group>
-                                    <div :key="item.itemName" v-for="item in items">
+                                    <div :key="item.name" v-for="item in items">
                                         <v-container class="">
                                             <v-row align-content="end" justify="center" class="mx-5">
                                                 <v-col class="lg" sm=6>
-                                                    <h3>{{item.itemName}}</h3>
-                                                    <p class="mb-0">{{item.itemSubtitle1}}</p>
-                                                    <p>{{item.itemSubtitle2}}</p>
+                                                    <h3>{{item.name}}</h3>
+                                                    <p class="mb-0">{{item.idNumber}}</p>
+                                                    <p>{{item.role}}</p>
                                                 </v-col>  
                                                 <v-col class="my-auto pa-0" sm=1>
                                                     <v-radio color="p1"></v-radio>
