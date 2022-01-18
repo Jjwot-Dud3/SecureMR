@@ -42,18 +42,18 @@
                                     
                                 </v-toolbar>
                                 
-                                <v-radio-group>
-                                    <div :key="item.name" v-for="item in items">
+                                <v-radio-group v-model="selected">
+                                    <div :key="item.idNumber" v-for="item in items">
                                         <v-container class="">
                                             <v-row align-content="end" justify="center" class="mx-5">
                                                 <v-col class="lg" sm=6>
                                                     <h3>{{item.name}}</h3>
-                                                    <p class="mb-0">{{item.id}}</p>
+                                                    <p class="mb-0">{{item.idNumber}}</p>
                                                     <p class="mb-0">{{item.age}}</p>
                                                     <p>{{item.role}}</p>
                                                 </v-col>  
                                                 <v-col class="my-auto pa-0" sm=1>
-                                                    <v-radio color="p1"></v-radio>
+                                                    <v-radio color="p1" :value="item"></v-radio>
                                                 </v-col>
                                             </v-row>
                                         </v-container>
@@ -84,6 +84,7 @@ export default {
     },
     data(){
         return {
+            selected:'',
             roles: [
                 "Afiliado",
                 "Profesional Medico"
