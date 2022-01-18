@@ -49,6 +49,9 @@
                 <v-icon>mdi-bell-badge-outline</v-icon>
             </v-btn>
             <v-btn class="mx-2" small fab color="grey darken-1" icon>
+                <v-icon>mdi-power</v-icon>
+            </v-btn>
+            <v-btn class="mx-2" small fab color="grey darken-1" icon>
                 <v-icon>mdi-cog-outline</v-icon>
             </v-btn>
         </v-app-bar>
