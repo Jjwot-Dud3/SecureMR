@@ -25,7 +25,7 @@
                                                         <v-col cols=11>
                                                             <v-text-field class=""
                                                                 color="p1"
-                                                                label="Inserte el correo de la persona"
+                                                                label="Inserte la cedula de la persona"
                                                             ></v-text-field>
                                                         </v-col>
                                                     </v-row>
@@ -38,11 +38,11 @@
                                 </v-toolbar>
                                 
                                 <v-form>
-                                    <v-row justify-sm="left">
+                                    <v-row justify-sm="center">
                                         <v-col cols="8">
                                         <v-container>
-                                            <v-row justify="center">
-                                                    <v-col >
+                                            <v-row justify>
+                                                    <v-col>
                                                         <v-text-field hint="Nombre" :value="item.name" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                     <v-col>
@@ -51,7 +51,7 @@
                                                 </v-row>
                                                 <v-row>
                                                     <v-col>
-                                                        <v-text-field hint="Rol" :value="item.id" persistent-hint readonly></v-text-field>
+                                                        <v-text-field hint="ARS" :value="item.ars" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                 </v-row>
                                             </v-container> 
@@ -70,7 +70,7 @@
 
 <script>
 export default {
-    name: "AddTrustedPersonsList",
+    name: "AddTrustedContactForm",
     props:  {
         item: Object
     },

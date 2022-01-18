@@ -4,9 +4,11 @@
             <v-row>
                 <v-col>
                     <v-form>
+                        
                         <v-card class="my-10" max-width="1500px">
+                            
                             <div>
-                                <h1 class="text-center">Agregar personas de confianza</h1>
+                                <h1 class="text-center">Agregar Persona de confianza</h1>
                             </div>
                             <div class="mx-auto">
                                 <v-toolbar class="mx-10 my-5">
@@ -23,50 +25,40 @@
                                                         <v-col cols=11>
                                                             <v-text-field class=""
                                                                 color="p1"
-                                                                label="Inserte el nombre de la persona"
+                                                                label="Inserte la cedula de la persona"
                                                             ></v-text-field>
                                                         </v-col>
                                                     </v-row>
                                                 </v-container>
                                             </v-col>
-                                            <v-col cols=2>
-                                                <v-combobox
-                                                    :items="roles"
-                                                    label="Rol"
-                                                    outlined
-                                                    dense
-                                                ></v-combobox>
-                                            </v-col>
+                                            
                                         </v-row>
                                     </v-container>
                                     
                                 </v-toolbar>
                                 
-                                <v-radio-group v-model="selected">
-                                    <div :key="item.idNumber" v-for="item in items">
-                                        <v-container class="">
-                                            <v-row align-content="end" justify="center" class="mx-5">
-                                                <v-col class="lg" sm=6>
-                                                    <h3>{{item.name}}</h3>
-                                                    <p class="mb-0">{{item.idNumber}}</p>
-                                                    <p class="mb-0">{{item.age}}</p>
-                                                    <p>{{item.role}}</p>
-                                                </v-col>  
-                                                <v-col class="my-auto pa-0" sm=1>
-                                                    <v-radio color="p1" :value="item"></v-radio>
-                                                </v-col>
-                                            </v-row>
-                                        </v-container>
-                                        
-                                    </div>
-                                </v-radio-group>
-                                <div class="text-center py-5">
-                                    <v-pagination
-                                    v-model="page"
-                                    :length="1"
-                                    circle
-                                    ></v-pagination>
-                                </div>
+                                <v-form>
+                                    <v-row justify-sm="center">
+                                        <v-col cols="8">
+                                        <v-container>
+                                            <v-row justify>
+                                                    <v-col>
+                                                        <v-text-field hint="Nombre" :value="item.name" persistent-hint readonly></v-text-field>
+                                                    </v-col>
+                                                    <v-col>
+                                                        <v-text-field hint="ID" :value="item.id" persistent-hint readonly></v-text-field>
+                                                    </v-col>
+                                                </v-row>
+                                                <v-row>
+                                                    <v-col>
+                                                        <v-text-field hint="Rol" :value="item.id" persistent-hint readonly></v-text-field>
+                                                    </v-col>
+                                                </v-row>
+                                            </v-container> 
+                                        </v-col>
+                                    </v-row>
+                                </v-form>
+                                
                             </div>
                         </v-card>
                     </v-form>
@@ -80,7 +72,7 @@
 export default {
     name: "AddTrustedPersonsList",
     props:  {
-        items: Array
+        item: Array
     },
     data(){
         return {
