@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/pss/emitDocumentArs',
     name: 'EmitDocumentArs',
-    component: EmitDocumentArs,
+    component: EmitDocument,
     meta: {requiresAuth: true}
   }, 
   {
