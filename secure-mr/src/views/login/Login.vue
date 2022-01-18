@@ -81,7 +81,7 @@ export default {
                 localStorage.userName = response.data.data.userName;
                 localStorage.accessToken = response.data.data.accessToken;
                 localStorage.role = response.data.data.role;
-                $http.defaults.headers.common['Authorization'] = "Bearer " + localStorage.getItem('token');
+                this.$http.defaults.headers.common['Authorization'] = "Bearer " + localStorage.getItem('token');
                 this.$router.go()
             }).error(() => {
                 // set error message to incorrect password or username 
