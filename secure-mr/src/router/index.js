@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import EmitDocumentArs from "../views/pss/PssEmitDocument"
+import EmitSolicitude from "../views/pss/PssEmitSolicitude.vue"
 import PssHome from '../views/pss/PssHome'
 import AffiliateHome from '../views/affiliate/AffiliateHome'
 import AffiliateBrowseDocuments from '../views/affiliate/AffiliateBrowseDocuments'
 import DocumentAccessListPersons from '../views/affiliate/AffiliateBrowseDocumentAccessPersons'
 import AffiliateAddTrustedPersons from '../views/affiliate/AffiliateAddTrustedPersons'
+
 
 Vue.use(VueRouter)
 
@@ -30,6 +32,11 @@ const routes = [
     path: '/affiliate/documents',
     name: "Consulta de Documentos",
     component: AffiliateBrowseDocuments
+  },
+  {
+    path: '/pss/emitSolicitude',
+    name: "Emitir Solicitud",
+    component: EmitSolicitude
   },
   {
     path: '/affiliate/accessListPersons',

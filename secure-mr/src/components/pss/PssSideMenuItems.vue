@@ -38,6 +38,10 @@ export default {
               title: 'Emitir Documentos',
               route: '/pss/documents/create/arsselect' 
             },
+            {
+              title: 'Emitir Solicitud',
+              route: '/pss/emitSolicitude'
+            },
           ],
           title: 'Documentos',
         },
