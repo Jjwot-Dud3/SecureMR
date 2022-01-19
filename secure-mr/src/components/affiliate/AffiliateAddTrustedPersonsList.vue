@@ -23,7 +23,7 @@
                                                             </v-icon>
                                                         </v-col>
                                                         <v-col cols=11>
-                                                            <v-text-field class=""
+                                                            <v-text-field v-model="search" class=""
                                                                 color="p1"
                                                                 label="Inserte la cedula de la persona"
                                                             ></v-text-field>
@@ -51,7 +51,7 @@
                                                 </v-row>
                                                 <v-row>
                                                     <v-col>
-                                                        <v-text-field hint="Rol" :value="item.id" persistent-hint readonly></v-text-field>
+                                                        <v-text-field hint="Rol" :value="item.ars" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                 </v-row>
                                             </v-container> 
@@ -71,16 +71,41 @@
 <script>
 export default {
     name: "AddTrustedPersonsList",
-    props:  {
-        item: Array
-    },
     data(){
-        return {
-            selected:'',
-            roles: [
-                "Afiliado",
-                "Profesional Medico"
-            ]
+        return{
+            item: {
+                name:null,
+                id:null,
+                age:null,
+                NSS:null,
+                ars:null
+            },
+            search: ''
+        }
+        
+    },
+    watch: {
+        search(val){
+            if(val == '654-4596786-2') {
+                this.item = {
+                    name:"Jan Molina",
+                    id:"654-4596786-2",
+                    age:21,
+                    NSS:74579332,
+                    ars: "Afiliado"
+                }
+            } else {
+                this.item = {
+                    name:null,
+                    id:null,
+                    age:null,
+                    NSS:null,
+                    ars:null
+                }
+            }
+            
+            
+                
         }
     }
 }

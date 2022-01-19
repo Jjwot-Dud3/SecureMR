@@ -67,6 +67,7 @@ export default {
            {
              title:'Agregar personas de confianza',
              icon:"mdi-account-multiple-plus-outline",
+             route:"/affiliate/addtrustedpersons"
            },
            {
              title:'Eliminar persona de confianza',

@@ -21,9 +21,9 @@ export default {
             documents: [
           {
             id: '#618c7cca5a79d572af8b722f',
-            date: "11/01/21",
+            date: "04/01/21",
             emitter: "Centro Médico Moderno",
-            description: "Tomografía de Tórax",
+            description: "Tomografia de Torax",
             state: "Listo para Visualizar",
             visualize: true,
           }

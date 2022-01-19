@@ -150,7 +150,7 @@ export default {
                 id: 1,
                 itemName: "Gabriel Santana",
                 itemSubtitle1: "gabrielsantana@gmail.com",
-                itemSubtitle2: "322-8596786-6"
+                itemSubtitle2: "402-1730883-8"
             }],
             e1: 1,
             dialog: false,
@@ -162,7 +162,7 @@ export default {
       dialog (val) {
         if (!val) return
 
-        setTimeout(() => (this.$router.push('/pss/home')), 3000)
+        setTimeout(() => (this.$router.push('/')), 3000)
       },
     },
 }

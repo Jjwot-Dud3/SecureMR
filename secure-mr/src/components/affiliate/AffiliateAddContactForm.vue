@@ -25,7 +25,7 @@
                                                         <v-col cols=11>
                                                             <v-text-field v-model="search" class=""
                                                                 color="p1"
-                                                                label="Inserte la cedula de la persona"
+                                                                label="Inserte la cedula de la persona o el nombre de la PSS"
                                                             ></v-text-field>
                                                         </v-col>
                                                     </v-row>
@@ -46,14 +46,14 @@
                                                         <v-text-field hint="Nombre" :value="item.name" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                     <v-col>
-                                                        <v-text-field hint="ID" :value="item.id" persistent-hint readonly></v-text-field>
+                                                        <v-text-field hint="Dirección" :value="item.id" persistent-hint readonly></v-text-field>
                                                     </v-col>
                                                 </v-row>
-                                                <v-row>
+                                                <!-- <v-row>
                                                     <v-col>
                                                         <v-text-field hint="ARS" :value="item.ars" persistent-hint readonly></v-text-field>
                                                     </v-col>
-                                                </v-row>
+                                                </v-row> -->
                                             </v-container> 
                                         </v-col>
                                     </v-row>
@@ -86,10 +86,10 @@ export default {
     },
     watch: {
         search(val){
-            if(val == '402-1831893-0') {
+            if(val == 'Centro Medico Moderno') {
                 this.item = {
-                    name:"Gabriel Santana",
-                    id:"402-1730883-8",
+                    name:"Centro Medico Moderno",
+                    id:"Avenida Charles Sumner Esq, C. Jose Lopez # 5, Santo Domingo",
                     age:18,
                     NSS:1088976104,
                     ars: "Humano Ars"
