@@ -19,10 +19,17 @@
           <h2 class="text-center font-weight-bold display-2  Black--text text--accent-3">Iniciar Sesión</h2>
           <div class="text-center mt-lg-15">
           <v-form>
+          <p v-if="errors.length">
+          <!-- <b>Please correct the following error(s):</b> -->
+          <ul>
+            <li>{{ error[0] }}</li>
+          </ul>
+          </p>
           <v-text-field
           label="Tú Nombre de Usuario"
-          name="email"
-          v-model="email"
+          name="username"
+          v-model="username"
+          :rules="usernameRules"
           prepend-icon="mdi-account"
           type="text"
           color="purple lighten-3"
@@ -32,6 +39,7 @@
           label="Contraseña"
           name="password"
           v-model="password"
+          :rules="passwordRules"
           prepend-icon="mdi-lock"
           type="password"
           color="purple lighten-3"
@@ -67,16 +75,25 @@
 <script>
 export default {
     data:() => ({
+      errors: [],
       step: 1,
-      email: null,
-      password: null
+      username: null,
+      password: null,
+      usernameRules: [
+          value => !!value || 'Nombre de usuario es Requerido.',
+          value => (value < 5) || 'Nombre de usuario tiene que ser mayor que 4 caracteres.'
+      ],
+      passwordRules: [
+          value => !!value || 'Contraseña es Requerido.',
+          value => (value < 5) || 'Contraseña tiene que ser mayor que 7 carácteres.',
+      ],
     }),
     props:{
       source: String
     },
     methods: {
         login(){
-            this.$http.post('/accounts/login',{userName: this.email, password: this.password})
+            this.$http.post('/accounts/login',{userName: this.username, password: this.password})
             .then(response => {
                 localStorage.userName = response.data.data.userName;
                 localStorage.accessToken = response.data.data.accessToken;
@@ -85,10 +102,16 @@ export default {
                 this.$http.defaults.headers.common['Authorization'] = "Bearer " + localStorage.getItem('token');
                 this.$router.go()
             }).error(() => {
+                this.errors.push("Usuario o password incorrectos")
                 // set error message to incorrect password or username 
             })
             this.$router.push({name: 'Home'})
-        }
+        },
+        // checkForm: function(e) {
+        //   this.errors = [];
+
+        //   if(!this.name)
+        // }
     }
 };
 </script>

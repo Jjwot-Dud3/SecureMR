@@ -11,6 +11,9 @@
                                             <h3>Titulo:</h3>
                                             <v-text-field
                                                 color="p1"
+                                                id="title"
+                                                v-model="fields.title"
+                                                :rules="rules"
                                                 outlined
                                             ></v-text-field>
                                         </v-col>
@@ -20,8 +23,10 @@
                                         <v-col>
                                             <h3>Tipo de Documento:</h3>
                                             <v-autocomplete
-                                                v-model="value"
+                                                v-model="fields.documentType"
+                                                id="documentType"
                                                 :items="types"
+                                                :rules="rules"
                                                 dense
                                                 outlined
                                                 color="p1"
@@ -34,10 +39,13 @@
                                         <v-col>
                                             <h3>Comentarios:</h3>
                                             <v-textarea
+                                                id="comments"
+                                                v-model="fields.comments"
                                                 outlined
                                                 no-resize
                                                 clearable
                                                 color="p1"
+                                                :rules="rules"
                                                 name="input-7-1"
                                                 placeholder="*Indica comentarios acerca del documento"
                                             ></v-textarea>
@@ -56,13 +64,14 @@
                             <v-col cols=6>
                                 
                                     <v-file-input
-                                        v-model="files"
+                                        v-model="fields.file"
                                         color="p2"
                                         counter
-                                        label="Lista de archivos"
-                                        placeholder="Selecciona los archivos que deseas adjuntar"
+                                        label="Archivo"
+                                        placeholder="Selecciona el archivo que deseas adjuntar"
                                         prepend-icon="mdi-paperclip"
                                         outlined
+                                        :rules="fileRules"
                                         :show-size="1000"
                                     >
                                         <template v-slot:selection="{ index, text }">
@@ -76,16 +85,17 @@
                                             {{ text }}
                                         </v-chip>
 
-                                        <span
+                                        <!-- <span
                                             v-else-if="index === 2"
                                             class="text-overline grey--text text--darken-3 mx-2"
                                         >
                                             +{{ files.length - 2 }} File(s)
-                                        </span>
+                                        </span> -->
                                         </template>
                                     </v-file-input>
                                 
                             </v-col>
+                            {{fields}}
                         </v-row>
                     </v-card>
                 </v-form>
@@ -103,9 +113,25 @@ export default {
         items: Array
     },
     data: () => ({
-      files: [],
+      files: null,
       types: ["Resultados","Resumen de Consulta","Receta","Licencias","Analísis Ortopedico"],
       picker: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+      title: null,
+      documentType: null,
+      comments: null,
+      rules: [
+          value => !!value || 'Campo es Requerido',
+      ],
+      fileRules:[
+          value => !!value || 'Archivo es Requerido',
+      ],
+      fields: {
+          title: null,
+          documentType: null,
+          comments: null,
+          file: null
+      }
     }),
+
 }
 </script>

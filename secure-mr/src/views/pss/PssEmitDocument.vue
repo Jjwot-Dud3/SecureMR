@@ -19,7 +19,7 @@
                         </v-stepper-header>
                         <v-stepper-items>
                             <v-stepper-content step="1">
-                                <CreateSelectListArs :items="ars"/>
+                                <CreateSelectListArs :items="ars" v-on:arsSelected="onArsSelected" />
                                 <v-row justify="center">
                                     <v-col cols='2'>
                                         <v-row>
@@ -29,7 +29,7 @@
                                                 </v-btn>
                                             </v-col>
                                             <v-col>
-                                                <v-btn elevation="1" color="p1" dark max-width="100px" @click="e1 = 2">
+                                                <v-btn elevation="1" class="white--text" color="p1" max-width="100px" @click="e1 = 2" :disabled="isDisabled" >
                                                     Siguiente
                                                 </v-btn>
                                             </v-col>
@@ -38,7 +38,7 @@
                                 </v-row>
                             </v-stepper-content>
                             <v-stepper-content step="2">
-                                <CreateSelectListAffiliate :items="affiliate"/>
+                                <CreateSelectListAffiliate :items="affiliates" v-on:affiliateSelected="onAffiliateSelected"/>
                                 <v-row justify="center">
                                     <v-col cols='2'>
                                         <v-row>
@@ -48,7 +48,7 @@
                                                 </v-btn>
                                             </v-col>
                                             <v-col>
-                                                <v-btn elevation="1" color="p1" dark max-width="100px" @click="e1 = 3">
+                                                <v-btn elevation="1" color="p1" class="white--text" max-width="100px" @click="e1 = 3" :disabled="isDisabled">
                                                     Siguiente
                                                 </v-btn>
                                             </v-col>
@@ -71,7 +71,7 @@
                                                 </v-btn>
                                             </v-col>
                                             <v-col>
-                                                <v-btn elevation="1" color="p1" dark max-width="100px" :disabled="dialog" :loading="dialog" @click="dialog=true" router>
+                                                <v-btn elevation="1" color="p1" class="white--text" max-width="100px" :disabled="dialog" :loading="dialog" @click="dialog=true" router>
                                                     Siguiente
                                                 </v-btn>
                                             </v-col>
@@ -122,39 +122,14 @@ export default {
     },
     data(){
         return{
-            ars: [{
-                id: 1,
-                itemName: "ARS Humano",
-                itemSubtitle1: "contacto@arshumano.com",
-                itemSubtitle2: "Av. Lope De Vega Esq. C. Fantino Falco"
-            },{
-            
-                id: 2,
-                itemName: "BHD Mapfre",
-                itemSubtitle1: "contacto@bhdmapfre.com",
-                itemSubtitle2: "Av. Abraham Lincoln 952"
-            },
-            {
-                id: 3,
-                itemName: "ARS Reservas",
-                itemSubtitle1: "contacto@arsreservas.com",
-                itemSubtitle2: "Calle Desiderio Arias 75"
-            },
-            {
-                id: 4,
-                itemName: "ARS Universal",
-                itemSubtitle1: "contacto@arsuniversal.com",
-                itemSubtitle2: "Av. Lope De Vega Esq. C. Fantino Falco"
-            }],
-            affiliate: [{
-                id: 1,
-                itemName: "Gabriel Santana",
-                itemSubtitle1: "gabrielsantana@gmail.com",
-                itemSubtitle2: "402-1730883-8"
-            }],
+            arsSelected: false,
+            arsSelectedValue: null,
+            affiliateSelected: false,
+            affiliateSelectedValue: null,
+            ars: [],
+            affiliates: [],
             e1: 1,
             dialog: false,
-
         }
         
     },
@@ -165,5 +140,60 @@ export default {
         setTimeout(() => (this.$router.push('/')), 3000)
       },
     },
+    created() {
+        this.$http.get('/accounts/ars/all').then(response => {
+            this.ars = response.data.data;
+        })
+        this.$http.get('/accounts/contact/all').then(response => {
+            var data = response.data.data; 
+            var affiliates = [];
+
+            for (let index = 0; index < data.length; index++) {
+                if(data[index].role == "Afiliado")
+                    affiliates.push(data[index])
+            }
+
+            this.affiliates = affiliates;
+        })
+    },
+    methods: {
+        onArsSelected(value){
+            if(Object.keys(value).length === 0){
+                this.arsSelectedValue = value;
+                this.arsSelected = false;
+            }
+            else {
+                this.arsSelectedValue = value;
+                this.arsSelected = true;
+            } 
+        },
+        onAffiliateSelected(value){
+            if(Object.keys(value).length === 0){
+                this.affiliateSelectedValue = value;
+                this.affiliateSelected = false;
+            }
+            else {
+                this.affiliateSelectedValue = value;
+                this.affiliateSelected = true;
+            } 
+        }
+    },
+    computed: {
+        isDisabled(){
+            console.log(this.e1)
+            if (this.e1 === 1){
+                return !this.arsSelected
+            }
+            if(this.e1 === 2){
+                return !this.affiliateSelected
+            }
+            if(this.e1 === 3){
+                return !false
+            }
+            return false;
+            
+        },
+
+    }
 }
 </script>
